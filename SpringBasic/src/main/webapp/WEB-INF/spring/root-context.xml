@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	<!-- com.ict.controller.di.classfile 패키지 내부의 클래스 설계도(Singer, Stage를 제공받겠다는 의미) -->
+	<context:component-scan 
+	base-package="com.ict.controller.di.classfile" />
+	
+	<!-- 빈 컨테이너 내부에 들어갈 객체 수동 생성 
+	bean 태그에 id, class 속성을 넣어 작성합니다.
+	id : 빈 컨테이너 내부적으로 사용할 이름 
+	class : 설계도가 될 클래스의 경로(패키지부터 전체) -->
+	<bean id="stage1" class="com.ict.controller.di.classfile.Stage">
+		<!-- 의존성 주입을 위해 클래스에 생성자나 setter를 생성해둔 경우, 지정해서 주입해줄수있음. 
+		 생성자로 설정한 경우는 constructor-arg 태그를 이용하고, ref속성에 주입해줄 자료를 선택하면 됩니다.
+		 자동완성도 가능합니다.-->
+		<constructor-arg ref="balladSinger"></constructor-arg>
+	</bean>
+	
+	<bean id="stage2" class="com.ict.controller.di.classfile.Stage">
+		<constructor-arg ref="popSinger"></constructor-arg>
+	</bean>
+</beans>
