@@ -1,3 +1,5 @@
 INDEX VERSION 1.131
+C:\spring_1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\299335866.index
+\SpringBoard\src\main\java
 C:\spring_1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2658272158.index
 \SpringBasic\src\main\java
