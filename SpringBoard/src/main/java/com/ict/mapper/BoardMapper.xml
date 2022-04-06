@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http:/mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 위쪽에는 마이바티스에서 사용할 xml파일임을 명시
+아래쪽 mapper태그의 namespace에 어떤 인터페이스와 연동할지 패키지부터 다 적음 -->
+<mapper namespace="com.ict.mapper.BoardMapper">
+	<!-- id속성에 BoardMapper에 적어둔 메서드명을
+	resultType에 리턴자료형인 BoardVO를 패키지부터-->
+	<select id="getList" resultType="com.ict.vo.BoardVO">
+		<!-- 태그 여닫는 문자인 < > 가 쿼리문 중간에 오는경우
+		CDATA로 감싸서 해당 로직이 태그를 여닫기 위한 목적이 없음을 명시해야 한다. -->
+		<![CDATA[
+		SELECT * FROM board_tbl WHERE bno < 4
+		]]>
+	</select>
+
+
+</mapper>

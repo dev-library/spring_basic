@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http:/mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 위쪽에는 마이바티스에서 사용할 xml파일임을 명시
+아래쪽 mapper태그의 namespace에 어떤 인터페이스와 연동할지 패키지부터 다 적음 -->
+<mapper namespace="com.ict.time.mapper.TimeMapper">
+
+	<!-- select 구문을 날릴 예정이므로 select 태그를, id는 연동 메서드명
+		resultType은 리턴자료형을 "소문자만 써서" 작성하면 됩니다. -->
+	<select id="getTime2" resultType="string">
+		SELECT sysdate FROM dual
+	</select>
+
+</mapper>

@@ -10,9 +10,9 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 		<property name="driverClassName" 
-				  value="oracle.jdbc.OracleDriver"></property>
+				  value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
 		<property name="jdbcUrl"
-				  value="jdbc:oracle:thin:@localhost:1521/XEPDB1"></property>
+				  value="jdbc:log4jdbc:oracle:thin:@localhost:1521/XEPDB1"></property>
 		<property name="username" value="mytest"></property>
 		<property name="password" value="mytest"></property>
 	</bean>
@@ -26,6 +26,8 @@
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>	
 	
+	<!-- com.ict.mapper 패키지 생성후 BoardMapper 인터페이스와 xml파일을 생성만 해주세요. -->
 	<mybatis-spring:scan base-package="com.ict.mapper"/>	
+	<mybatis-spring:scan base-package="com.ict.time.mapper"/>	
 	
 </beans>

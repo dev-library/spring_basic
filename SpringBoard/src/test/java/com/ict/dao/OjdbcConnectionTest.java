@@ -27,7 +27,7 @@ public class OjdbcConnectionTest {
 					"mytest",
 					"mytest"
 				)){
-			System.out.println(con);
+			log.info(con);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}
