@@ -5,7 +5,26 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-04-05T19:09:42Z</updated>
+  <updated>2022-04-06T04:00:00Z</updated>
+  <entry>
+    <title>Spring Cloud Data Flow 2.9.4 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/04/05/spring-cloud-data-flow-2-9-4-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Chris Bono</name>
+    </author>
+    <id>tag:spring.io,2022-04-06:4762</id>
+    <updated>2022-04-06T04:00:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I¡¯m happy to announce that Spring Cloud Dataflow &lt;code&gt;2.9.4&lt;/code&gt; has been released and is now available from Maven Central.&lt;/p&gt;
+&lt;p&gt;This release contains an update of the Spring Boot version and addresses a couple of CVEs. See the &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/releases/tag/v2.9.4"&gt;release notes&lt;/a&gt; for more information.&lt;/p&gt;&lt;h2&gt;&lt;a href="#notable-changes-in-2-9-4" class="anchor" name="notable-changes-in-2-9-4"&gt;&lt;/a&gt;Notable Changes in 2.9.4&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Update to Spring Boot &lt;code&gt;2.5.12&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Resolves &lt;a href="https://tanzu.vmware.com/security/cve-2022-22965"&gt;CVE-2022-22965&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Resolves &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2021-29425"&gt;CVE-2021-29425&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;&lt;a href="#stay-in-touch-hellip" class="anchor" name="stay-in-touch-hellip"&gt;&lt;/a&gt;Stay in touch&amp;hellip;&lt;/h2&gt;
+&lt;p&gt;As always, we welcome feedback and contributions, so please reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-dataflow"&gt;Stackoverflow&lt;/a&gt; or &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/issues"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Spring Cloud 2022.0.0-M2 (codename Kilburn) Has Been Released</title>
     <link rel="alternate" href="https://spring.io/blog/2022/04/05/spring-cloud-2022-0-0-m2-codename-kilburn-has-been-released" />
@@ -715,26 +734,6 @@ public class MyApp {&#xD;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-authorization-server"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-authorization-server/issues"&gt;GitHub Issues&lt;/a&gt; |  &lt;a href="https://app.zenhub.com/workspaces/authorization-server-5e8f3182b5e8f5841bfc4902/board?repos=248032165"&gt;ZenHub Board&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Batch 5.0 M2 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/03/23/spring-batch-5-0-m2-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Mahmoud Ben Hassine</name>
-    </author>
-    <id>tag:spring.io,2022-03-23:4741</id>
-    <updated>2022-03-23T22:08:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Batch 5.0.0-M2 is now available from our &lt;a href="https://repo.spring.io/milestone"&gt;milestone repository&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This second milestone comes with two major features:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Introduction of the new Observation API from Micrometer 2.0 which gives you both metrics and tracing for your batch jobs!&lt;/li&gt;
-  &lt;li&gt;Addition of SAP HANA as a supported database for the job repository&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Moreover, this release comes with a number of enhancements and dependencies updates. For more details about all the changes, please check the &lt;a href="https://github.com/spring-projects/spring-batch/releases/tag/5.0.0-M2"&gt;change log&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I would like to thank all contributors who had a role in this release! As we continue our work on Spring Batch 5, we look forward to your feedback on this second milestone!&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-batch"&gt;Spring Batch Home&lt;/a&gt;|&lt;a href="https://github.com/spring-projects/spring-batch"&gt;Source on Github&lt;/a&gt;|&lt;a href="https://docs.spring.io/spring-batch/docs/5.0.0-M2/reference/html/index-single.html"&gt;Reference documentation&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
