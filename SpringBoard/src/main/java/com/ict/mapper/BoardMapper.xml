@@ -27,7 +27,32 @@
 		SELECT * FROM board_tbl WHERE bno=#{bno}
 	</select>
 
+	<!-- BoardMapper.java의 delete 메서드를 연결해 해당 메서드 실행시 실행될 쿼리문 작성 -->
+	<delete id="delete">
+		DELETE FROM board_tbl WHERE bno=#{bno}
+	</delete>
+	
+	<!-- BoardMapper.java의 update 메서드를 연결해 해당 메서드 실행시 실행될 쿼리문 작성 -->
+	<update id="update">
+		UPDATE board_tbl 
+			SET 
+		title=#{title}, content=#{content}, updatedate=SYSDATE 
+			WHERE 
+		bno=#{bno}
+	</update>
 
-
+	<!-- BoardMapper.java의 update 메서드를 연결해 해당 메서드 실행시 실행될 쿼리문 작성 -->
+	<update id="update2">
+		UPDATE board_tbl 
+			SET 
+		title=#{title}, content=#{content}, updatedate=SYSDATE 
+			WHERE 
+		bno=#{bno}
+	</update>
 
 </mapper>
+
+
+
+
+

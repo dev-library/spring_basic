@@ -14,10 +14,17 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\ict03-00\Desktop\0407-spring.zip"/>
 			<item value="C:\Users\ict03-00\Desktop\0406-spring.zip"/>
 			<item value="C:\Users\ict03-00\Desktop\0405-spring.zip"/>
 			<item value="C:\Users\ict03-00\Desktop\0404-spring.zip"/>
 			<item value="C:\Users\ict03-00\Desktop\0325-spring(encoding).zip"/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jst.jsp.ui.internal.wizard.NewJSPWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.wst.web.ui"/>
 		</list>
 	</section>
 </section>
