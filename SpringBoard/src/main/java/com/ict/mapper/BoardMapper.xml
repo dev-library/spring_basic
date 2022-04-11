@@ -10,7 +10,10 @@
 		<!-- 태그 여닫는 문자인 < > 가 쿼리문 중간에 오는경우
 		CDATA로 감싸서 해당 로직이 태그를 여닫기 위한 목적이 없음을 명시해야 한다. -->
 		<![CDATA[
-		SELECT * FROM board_tbl ORDER BY bno DESC
+			SELECT * FROM
+				(SELECT /*+ INDEX_DESC(board_tbl pk_board) */
+				rownum rn, board_tbl.* FROM board_tbl WHERE rownum <= (#{pageNum}*10))
+					WHERE rn > ((#{pageNum}-1)*10)
 		]]>
 	</select>
 	

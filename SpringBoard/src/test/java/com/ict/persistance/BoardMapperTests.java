@@ -25,7 +25,7 @@ public class BoardMapperTests {
 	// 테스트 코드가 실행될 수 있도록 작성해주세요.
 	//@Test
 	public void testGetList() {
-		List<BoardVO> result = boardMapper.getList();
+		List<BoardVO> result = boardMapper.getList(1);
 		log.info("저장된 게시물 정보 : " + result);
 	}
 	
