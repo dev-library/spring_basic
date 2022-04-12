@@ -12,9 +12,12 @@
 		<![CDATA[
 			SELECT * FROM
 				(SELECT /*+ INDEX_DESC(board_tbl pk_board) */
-				rownum rn, board_tbl.* FROM board_tbl WHERE rownum <= (#{pageNum}*10))
-					WHERE rn > ((#{pageNum}-1)*10)
+				rownum rn, board_tbl.* FROM board_tbl WHERE rownum <= #{pageEnd})
+					WHERE rn > #{pageStart}
 		]]>
+		<!-- getter는 #{} 내부에서 호출가능함
+		get을 뺀 나머지 메서드명을 적어주면 됨. 
+		맨앞글자는 무조건 소문자-->
 	</select>
 	
 	<!-- insert 구문이므로 insert태그를 써야 하고 리턴자료가 없으니 자연히 resultType도 작성안합니다. 
@@ -52,6 +55,10 @@
 			WHERE 
 		bno=#{bno}
 	</update>
+
+	<select id="countPageNum" resultType="int">
+		SELECT COUNT(*) FROM board_tbl
+	</select>
 
 </mapper>
 
