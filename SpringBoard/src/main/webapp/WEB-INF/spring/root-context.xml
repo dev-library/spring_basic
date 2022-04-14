@@ -28,6 +28,9 @@
 	
 	<!-- com.ict.mapper 패키지 생성후 BoardMapper 인터페이스와 xml파일을 생성만 해주세요. -->
 	<mybatis-spring:scan base-package="com.ict.mapper"/>	
-	<mybatis-spring:scan base-package="com.ict.time.mapper"/>	
+	<mybatis-spring:scan base-package="com.ict.time.mapper"/>
+	
+	<!-- com.ict.service에 대해서 컴포넌트 스캔을 해 주세요. -->
+	<context:component-scan base-package="com.ict.service" />	
 	
 </beans>

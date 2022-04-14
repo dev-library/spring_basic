@@ -5,7 +5,43 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-04-07T20:00:00Z</updated>
+  <updated>2022-04-12T22:00:00Z</updated>
+  <entry>
+    <title>This Week in Spring - April 12th, 2022 (Devnexus 2022 Edition!!)</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/04/12/this-week-in-spring-april-12th-2022-devnexus-2022-edition" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2022-04-12:4764</id>
+    <updated>2022-04-12T22:00:00Z</updated>
+    <content type="html">&lt;h2&gt;&lt;a href="#this-week-in-spring-devnexus-edition" class="anchor" name="this-week-in-spring-devnexus-edition"&gt;&lt;/a&gt;This Week in Spring - Devnexus Edition&lt;/h2&gt;
+&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt; - I&amp;rsquo;m at my first in-person event since the virus: Devnexus! WOOHOOO!! Well, technically I&amp;rsquo;m still in San Francisco as I write this, but I&amp;rsquo;ll be in Atlanta, GA tomorrow for&amp;hellip; Devnexus! I hope if you&amp;rsquo;re there that you&amp;rsquo;ll reach out! &lt;/p&gt;
+&lt;p&gt;Friends, colleagues, and community members from the Spring, Tanzu, and adjoining communities will also be there! Here are some of the people I hope to nab a selfie with and whose talks I hope to see! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://devnexus.com/speakers/699"&gt;Glenn Renfro&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://devnexus.com/speakers/3383"&gt;Adib Saikali&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://devnexus.com/speakers/3373"&gt;Joe Grandja&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://devnexus.com/speakers/3269"&gt;Whitney Lee&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://devnexus.com/speakers/3231"&gt;Hillmer Chona&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://devnexus.com/speakers/2658"&gt;Jonatan Ivanov&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://devnexus.com/speakers/2647"&gt;Josh Cummings&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://devnexus.com/speakers/2271"&gt;Alberto C. Rios&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://devnexus.com/speakers/3246"&gt;Simon Brown&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And of course &lt;a href="https://devnexus.com/speakers/1669"&gt;I&amp;rsquo;ll be doing two talks, as well,&lt;/a&gt; (one on GraalVm and another on edge services) and I hope you&amp;rsquo;ll come see those, too! &lt;/p&gt;
+&lt;p&gt;And with that out of the way, let&amp;rsquo;s get on with our regularly scheduled roundup!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/04/07/a-bootiful-podcast-graphql-java-founder-andi-marek"&gt;A Bootiful Podcast: GraphQL Java founder Andi Marek&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/asirselvasingh/status/1511758596698099712?s=12&amp;t=RpVGANAybKGoPHwwYDPBCQ"&gt;Asir V Selvasingh on Twitter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/04/07/upcoming-changes-in-kubernetes-1-24/"&gt;Blog: Kubernetes Removals and Deprecations In 1.24&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Congrats to the Hibernate team &lt;a href="https://in.relation.to/2022/03/31/orm-60-final/"&gt;for reaching Hibernate 6.0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.sivalabs.in/2022/04/my-attempt-to-understand-why-people-perceive-java-as-complex/"&gt;SivaLabs has a nice post called, &amp;ldquo;My attempt to understand why people perceive Java as complex.&amp;rdquo; &lt;/a&gt; What do you think?&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/04/05/spring-cloud-data-flow-2-9-4-released"&gt;Spring Cloud Data Flow 2.9.4 Released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/JavaAtMicrosoft/status/1512161238121209856"&gt; Spring Cloud Azure 4.0 integrations are generally available. &lt;/a&gt; Congrats to the teams at Microsoft and the community on such an epic release!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>A Bootiful Podcast: GraphQL Java founder Andi Marek</title>
     <link rel="alternate" href="https://spring.io/blog/2022/04/07/a-bootiful-podcast-graphql-java-founder-andi-marek" />
@@ -698,21 +734,6 @@ public class MyApp {&#xD;
 &lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.6.5"&gt;66 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
 &lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-boot/docs/2.6.5/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Boot 2.5.11 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/03/24/spring-boot-2-5-11-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>St?phane Nicoll</name>
-    </author>
-    <id>tag:spring.io,2022-03-24:4744</id>
-    <updated>2022-03-24T13:48:43Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Boot &lt;code&gt;2.5.11&lt;/code&gt; has been released and is now available from Maven Central.&lt;/p&gt;
-&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.5.11"&gt;56 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
-&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-boot/docs/2.5.11/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

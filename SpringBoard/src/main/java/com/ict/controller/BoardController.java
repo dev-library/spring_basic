@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.ict.domain.BoardVO;
 import com.ict.domain.Criteria;
 import com.ict.domain.PageMaker;
+import com.ict.domain.SearchCriteria;
 import com.ict.mapper.BoardMapper;
+import com.ict.service.BoardService;
 
 import lombok.extern.log4j.Log4j;
 
@@ -24,12 +26,11 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 public class BoardController {
 
-	// 전체 회원을 보려면, 회원목록을 들고오는 메서드를 실행해야 하고
-	// 그러면, 그 메서드를 보유하고 있는 클래스를 선언하고 주입해줘야 합니다.
-	// DB 접근시 사용하는 BoardMapper를 선언하고 주입해주세요.
-	// 참고) BoardMapperTests.java
+	// 컨트롤러는 Service만 호출하도록 구조를 바꿉니다.
+	// Service를 BoardController 내부에서 쓸 수 있도록 선언/주입해주세요.
 	@Autowired
-	private BoardMapper boardMapper;
+	private BoardService service;//(실제 주입되는 요소는 ServiceImpl이므로 호출지점도 ServiceImpl임)
+	
 	
 	// 전체 글 목록을 볼 수 있는 페이지인 boardList.jsp로 연결되는
 	// /boardList 주소를 get방식으로 선언해주세요.
@@ -39,19 +40,19 @@ public class BoardController {
 	// @PathVariable의 경우 defaultValue를 직접 줄 수 없으나, required=false를 이용해 필수입력을 안받게 처리한 후
 	// 컨트롤러 내부에서 디폴트값을 입력해줄 수 있다.
 	// 기본형 자료는 null을 저장할 수 없기 때문에 wrapper class를 이용해 Long을 선언합니다.
-	public String boardList(Criteria cri, Model model) {
+	public String boardList(SearchCriteria cri, Model model) {
 		//if(pageNum == null) {
 		//	pageNum = 1L;// Long형은 숫자 뒤에 L을 붙여야 대입됩니다.
 		//}
 		// model.addAttribute("바인딩이름", 바인딩자료);
-		List<BoardVO> boardList = boardMapper.getList(cri);
+		List<BoardVO> boardList = service.getList(cri);
 		log.info("넘어온 글 관련 정보 목록 : " + boardList);
 		model.addAttribute("boardList", boardList);
 		
 		// 버튼 처리를 위해 추가로 페이지메이커 생성 및 세팅
 		PageMaker pageMaker = new PageMaker();
 		pageMaker.setCri(cri);// cri 입력
-		int countPage = boardMapper.countPageNum();// 131대신 실제로 DB내 글 개수를 받아옴
+		int countPage = service.countPageNum();// 131대신 실제로 DB내 글 개수를 받아옴
 		pageMaker.setTotalBoard(countPage);// calcData()호출도 되면서 순식간에 prev, next, startPage, endPage세팅
 		model.addAttribute("pageMaker", pageMaker);
 		
@@ -64,7 +65,7 @@ public class BoardController {
 	// 숙제 : @PathVariable적용 방식으로 바꿔보세요, boardList에서 제목클릭시 넘어오게해주세요.
 	@GetMapping("/boardDetail/{bno}")
 	public String boardDetail(@PathVariable long bno, Model model) {
-		BoardVO board = boardMapper.select(bno);
+		BoardVO board = service.select(bno);
 		model.addAttribute("board", board);
 		return "boardDetail";
 	}
@@ -87,7 +88,7 @@ public class BoardController {
 		// 폼에서 날린 데이터 들어오는지 디버깅
 		log.info("들어온 데이터 디버깅 : " + board);
 		// insert 로직 실행
-		boardMapper.insert(board);
+		service.insert(board);
 		return "redirect:/boardList";
 	}
 	
@@ -100,7 +101,7 @@ public class BoardController {
 	@PostMapping("/boardDelete")
 	public String boardDelete(long bno) {
 		// 삭제로직 실행
-		boardMapper.delete(bno);
+		service.delete(bno);
 		// 리턴으로 리스트페이지 복귀
 		return "redirect:/boardList";
 	}
@@ -112,7 +113,7 @@ public class BoardController {
 	// 폼페이지 이름은 boardUpdateForm.jsp 입니다.
 	@PostMapping("/boardUpdateForm")
 	public String boardUpdateForm(long bno, Model model) {
-		BoardVO board = boardMapper.select(bno);
+		BoardVO board = service.select(bno);
 		model.addAttribute("board", board);
 		return "boardUpdateForm";//${board};
 	}
@@ -124,7 +125,7 @@ public class BoardController {
 	@PostMapping("/boardUpdate")
 	public String boardUpdate(BoardVO board) {
 		// update 호출
-		boardMapper.update(board);
+		service.update(board);
 		// redirect:주소?글번=getter
 		return "redirect:/boardDetail/" + board.getBno();
 								

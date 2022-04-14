@@ -13,7 +13,7 @@ public class PageMaker {
 	// displayPageNum을 선언합니다.
 	private int displayPageNum;
 	// Criteria에서 현재 조회중인 페이지 정보 + 한 페이지에 깔리는 글 수를 받아와야함
-	private Criteria cri;
+	private SearchCriteria cri;
 	
 	// 필요한 모든 사항을 계산해주는 메서드
 	public void calcData() {
