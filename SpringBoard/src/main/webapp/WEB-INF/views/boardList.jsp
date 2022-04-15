@@ -25,7 +25,7 @@
 				<c:forEach var="board" items="${boardList }">
 					<tr>
 						<td>${board.bno }</td>
-						<td><a href="/boardDetail/${board.bno }?searchType=${pageMaker.cri.searchType }&keyword=${pageMaker.cri.keyword}"> ${board.title }</a></td>
+						<td><a href="/boardDetail/${board.bno }?pageNum=${pageMaker.cri.pageNum}&searchType=${pageMaker.cri.searchType }&keyword=${pageMaker.cri.keyword}"> ${board.title }</a></td>
 						<td>${board.writer }</td>
 						<td>${board.regdate }</td>
 						<td>${board.updatedate }</td>
@@ -65,7 +65,7 @@
 		  </ul>
 		  <div class="row">
 		  	<!-- 검색창 부분 -->
-		  	<form action="/boardList" mehtod="get">
+		  	<form action="/boardList" method="get">
 		  		<!-- select태그를 이용해 클릭해 검색조건을 선택할수있도록 처리합니다. -->
 		  		<select name="searchType">
 		  			<!-- 검색조건을 option태그를 이용해 만듭니다. -->

@@ -27,19 +27,23 @@
 		</div>
 		<div class="row">
 			<div class="col-md-1">
-				<a href="/boardList" class="btn btn-success btn-sm">글목록</a>
+				<a href="/boardList?pageNum=${param.pageNum == null ? 1 : param.pageNum}&searchType=${param.searchType }&keyword=${param.keyword}" class="btn btn-success btn-sm">글목록</a>
 			</div>
 			<div class="col-md-1">
 				<form action="/boardDelete" method="post">
-					<input type="hidden" 
-						value="${board.bno }" name="bno" />
+					<input type="hidden" value="${board.bno }" name="bno" />
+					<input type="hidden" name="pageNum" value="${param.pageNum}" />
+					<input type="hidden" name="searchType" value="${param.searchType}" />
+					<input type="hidden" name="keyword" value="${param.keyword}" />
 					<input type="submit" value="삭제" class="btn btn-danger btn-sm">
 				</form>
 			</div>
 			<div class="col-md-1">
 				<form action="/boardUpdateForm" method="post">
-					<input type="hidden" 
-						value="${board.bno }" name="bno" />
+					<input type="hidden" name="bno" value="${board.bno }" />
+					<input type="hidden" name="pageNum" value="${param.pageNum}" />
+					<input type="hidden" name="searchType" value="${param.searchType}" />
+					<input type="hidden" name="keyword" value="${param.keyword}" />
 					<input type="submit" value="수정" class="btn btn-warning btn-sm">
 				</form>
 			</div>

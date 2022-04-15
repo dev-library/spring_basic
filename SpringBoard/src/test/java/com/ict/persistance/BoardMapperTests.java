@@ -9,6 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.ict.domain.BoardVO;
+import com.ict.domain.SearchCriteria;
 import com.ict.mapper.BoardMapper;
 
 import lombok.extern.log4j.Log4j;
@@ -25,8 +26,8 @@ public class BoardMapperTests {
 	// 테스트 코드가 실행될 수 있도록 작성해주세요.
 	//@Test
 	public void testGetList() {
-		List<BoardVO> result = boardMapper.getList(1);
-		log.info("저장된 게시물 정보 : " + result);
+		//List<BoardVO> result = boardMapper.getList(1);
+		//log.info("저장된 게시물 정보 : " + result);
 	}
 	
 	//@Test
@@ -79,10 +80,23 @@ public class BoardMapperTests {
 		boardMapper.update(board);
 	}
 	
-	@Test
+	//@Test
 	public void testUpdate2() {
 		boardMapper.update2("up2로 바꾼제목", "up2로 바꾼본문", 2);
 	}
+	
+	// 검색어 검색조건 실행 제대로 되는지 여부 테스트
+	@Test
+	public void testSearchGetList() {
+		SearchCriteria cri = new SearchCriteria();
+		cri.setKeyword("테스트");
+		cri.setSearchType("t");
+		
+		boardMapper.getList(cri);
+	}
+	
+	
+	
 }
 
 

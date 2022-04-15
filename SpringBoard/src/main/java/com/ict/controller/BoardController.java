@@ -1,7 +1,9 @@
 package com.ict.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.ict.domain.BoardVO;
 import com.ict.domain.Criteria;
@@ -46,13 +49,14 @@ public class BoardController {
 		//}
 		// model.addAttribute("바인딩이름", 바인딩자료);
 		List<BoardVO> boardList = service.getList(cri);
+			
 		log.info("넘어온 글 관련 정보 목록 : " + boardList);
 		model.addAttribute("boardList", boardList);
 		
 		// 버튼 처리를 위해 추가로 페이지메이커 생성 및 세팅
 		PageMaker pageMaker = new PageMaker();
 		pageMaker.setCri(cri);// cri 입력
-		int countPage = service.countPageNum();// 131대신 실제로 DB내 글 개수를 받아옴
+		int countPage = service.countPageNum(cri);// 131대신 실제로 DB내 글 개수를 받아옴
 		pageMaker.setTotalBoard(countPage);// calcData()호출도 되면서 순식간에 prev, next, startPage, endPage세팅
 		model.addAttribute("pageMaker", pageMaker);
 		
@@ -99,7 +103,21 @@ public class BoardController {
 	// submit 버튼을 생성해서 처리하게 해주세요.
 	// 삭제 수행 후 boardList로 리다이렉트해주세요.
 	@PostMapping("/boardDelete")
-	public String boardDelete(long bno) {
+	public String boardDelete(long bno, SearchCriteria cri, RedirectAttributes rttr) {
+		log.info("pageNum 정보 : " + cri.getPageNum());
+		log.info("searchType 정보 : " + cri.getSearchType());
+		log.info("keyword 정보 : " + cri.getKeyword());
+		
+		// 리다이렉트 주소에 페이지번호, 검색조건, 키워드 전달
+		// rttr.addAllAttributes(Hashmap); 으로 전달시 한 번만 호출해 데이터를 전달할 수 있습니다.
+		Map<String, Object> parameters = new HashMap<>();
+		parameters.put("pageNum", cri.getPageNum());
+		parameters.put("searchType", cri.getSearchType());
+		parameters.put("keyword", cri.getKeyword());
+		log.info("전달 직전 : " + parameters);
+		// 위에 생성한 맵 자료를 전달합니다.
+		rttr.addAllAttributes(parameters);
+		
 		// 삭제로직 실행
 		service.delete(bno);
 		// 리턴으로 리스트페이지 복귀
@@ -123,7 +141,23 @@ public class BoardController {
 	// 해당 글의 내용이 수정되도록 만들어주시면 됩니다.
 	// 수정 후에는 수정요청이 들어온 글 번호의 디테일페이지로 리다이렉트 시켜주세요.
 	@PostMapping("/boardUpdate")
-	public String boardUpdate(BoardVO board) {
+											// keyword, searchType, pageNum 을 받기 위해 선언
+	public String boardUpdate(BoardVO board, SearchCriteria cri, RedirectAttributes rttr) {
+		// SearchCriteria가 제대로 받아오는지 체크
+		log.info("수정로직입니다 : " + board);
+		log.info("검색 키워드 : " +  cri.getKeyword());
+		log.info("검색조건 : " +  cri.getSearchType());
+		log.info("진입 페이지번호 : " +  cri.getPageNum());
+		
+		// 리다이렉트시 주소창 뒤에 파라미터 쿼리스트링 형식으로 붙이기
+		// rttr.addAttribute("파라미터명", "전달자료");
+		// 는 호출되면 redirect 주소 뒤에 파라미터를 붙여줍니다.
+		// rttr.addFlashAttribute()는 넘어간 페이지에서 파라미터를
+		// 쓸 수 있도록 전달하는것으로 둘의 역할이 다르니 주의하세요.
+		rttr.addAttribute("pageNum", cri.getPageNum());
+		rttr.addAttribute("searchType", cri.getSearchType());
+		rttr.addAttribute("keyword", cri.getKeyword());
+		
 		// update 호출
 		service.update(board);
 		// redirect:주소?글번=getter

@@ -4,6 +4,38 @@
 <!-- 위쪽에는 마이바티스에서 사용할 xml파일임을 명시
 아래쪽 mapper태그의 namespace에 어떤 인터페이스와 연동할지 패키지부터 다 적음 -->
 <mapper namespace="com.ict.mapper.BoardMapper">
+	<sql id="search">
+		<if test="searchType != null">
+			<if test="searchType == 't'.toString()">
+				(TITLE like '%'||#{keyword}||'%') AND
+			</if>
+			<if test="searchType == 'c'.toString()">
+				(CONTENT like '%'||#{keyword}||'%') AND
+			</if>
+			<if test="searchType == 'w'.toString()">
+				(WRITER like '%'||#{keyword}||'%') AND
+			</if>
+			<if test="searchType == 'tc'.toString()">
+				((TITLE like '%'||#{keyword}||'%')
+				OR
+				(CONTENT like '%'||#{keyword}||'%')) AND
+			</if>
+			<if test="searchType == 'cw'.toString()">
+				((CONTENT like '%'||#{keyword}||'%')
+				OR
+				(WRITER like '%'||#{keyword}||'%')) AND
+			</if>
+			<if test="searchType == 'tcw'.toString()">
+				((TITLE like '%'||#{keyword}||'%')
+				OR
+				(CONTENT like '%'||#{keyword}||'%')
+				OR
+				(WRITER like '%'||#{keyword}||'%')) AND
+			</if>
+		</if>
+	</sql>
+
+
 	<!-- id속성에 BoardMapper에 적어둔 메서드명을
 	resultType에 리턴자료형인 BoardVO를 패키지부터-->
 	<select id="getList" resultType="com.ict.domain.BoardVO">
@@ -12,7 +44,20 @@
 		<![CDATA[
 			SELECT * FROM
 				(SELECT /*+ INDEX_DESC(board_tbl pk_board) */
-				rownum rn, board_tbl.* FROM board_tbl WHERE rownum <= #{pageEnd})
+				rownum rn, board_tbl.* FROM board_tbl WHERE 
+			]]>	
+			
+			<!-- 조건에 따른 쿼리문이 가변적으로 추가될 부분 
+			이 쿼리문을 돌리면서 SearchCriteria를 돌리고 있으므로
+			SearchCriteria.searchType을 아래처럼 변수명만 적어 감지가 됨
+			
+			상단의 sql태그를 이용해 명칭을 부여했으므로, 명칭만 맞추면 긴 내용을 다 넣지 않아도 됨-->
+			<include refid="search" />
+
+				
+			<!-- 글 번호를 조절하기 위한 부분 -->	
+		<![CDATA[				
+				rownum <= #{pageEnd})
 					WHERE rn > #{pageStart}
 		]]>
 		<!-- getter는 #{} 내부에서 호출가능함
@@ -57,7 +102,16 @@
 	</update>
 
 	<select id="countPageNum" resultType="int">
-		SELECT COUNT(*) FROM board_tbl
+		<![CDATA[
+		SELECT COUNT(*) FROM board_tbl WHERE
+		]]>
+	
+		<!-- 글 개수 조회구문에도 include태그로 입력 -->
+		<include refid="search" />
+	
+		<![CDATA[
+			bno > 0
+		]]>
 	</select>
 
 </mapper>

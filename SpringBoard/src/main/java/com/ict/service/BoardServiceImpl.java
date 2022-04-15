@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.ict.domain.BoardVO;
 import com.ict.domain.Criteria;
+import com.ict.domain.SearchCriteria;
 import com.ict.mapper.BoardMapper;
 
 // BoardService 인터페이스 구현
@@ -25,13 +26,13 @@ public class BoardServiceImpl implements BoardService {
 	// 리턴자료형이 없는 insert, delete, update 구문은 사용자 행동 기준으로 메서드를 나눕니다.
 	// 리턴자료형이 있는 select 구문은 하나의 메서드가 하나의 쿼리문을 담당합니다.
 	@Override
-	public List<BoardVO> getList(Criteria cri) {
+	public List<BoardVO> getList(SearchCriteria cri) {
 		return boardMapper.getList(cri);
 	}
 
 	@Override
-	public int countPageNum() {
-		return boardMapper.countPageNum();
+	public int countPageNum(SearchCriteria cri) {
+		return boardMapper.countPageNum(cri);
 	}
 
 	@Override
