@@ -27,6 +27,7 @@ import lombok.extern.log4j.Log4j;
 // 컨트롤러가 컨트롤러 기능을 할 수 있도록 처리해주세요.
 @Controller
 @Log4j
+@RequestMapping("/board")
 public class BoardController {
 
 	// 컨트롤러는 Service만 호출하도록 구조를 바꿉니다.
