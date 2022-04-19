@@ -1,9 +1,13 @@
 package com.ict.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +17,7 @@ import com.ict.domain.ReplyVO;
 import com.ict.service.ReplyService;
 
 @RestController
-@RequestMapping("/replies")// replies가 기본적으로 붙음
+@RequestMapping("/replies")// 접속시 기본주소에 replies가 붙음
 public class ReplyController {
 
 	@Autowired
@@ -24,7 +28,7 @@ public class ReplyController {
 	// produces는 입력받은 데이터를 토대로 로직을 실행한 후에
 	// 사용자에게 결과로 보여줄 데이터의 형식(즉, 리턴자료형)을 나타냅니다.
 	// 아래 메서드는 json을 사용하므로 무조건 jackson-databind가 추가되어야 합니다.
-	@PostMapping(value="", consumes="application/json",	produces = {MediaType.TEXT_PLAIN_VALUE})
+	@PostMapping(value="", consumes="application/json",	produces={MediaType.TEXT_PLAIN_VALUE})
 	// PRODUCES에 TEXT_PLAIN_VALUE를 줬으므로 String 리턴
 	public ResponseEntity<String> register(
 					// RestController에서는 받는 파라미터 앞에 @RequestBody 어노테이션이 붙어야
@@ -44,6 +48,32 @@ public class ReplyController {
 		// 위의 try블럭이나 catch블럭에서 얻어온 entity 변수 리턴하기.
 		return entity;
 	}
+	
+	@GetMapping(value="/all/{bno}",
+		// 단일 숫자데이터 bno만 넣어서 조회하기도 하고
+		// PathVariable 어노테이션으로 이미 입력데이터가 명시되었으므로
+		// consumes는 따로 주지 않아도 됩니다.
+		// produces는 댓글 목록이 XML로도, JSON로도 표현될 수 있도록
+		// 아래와 같이 2개를 모두 얹습니다.
+		produces= {MediaType.APPLICATION_JSON_UTF8_VALUE, MediaType.APPLICATION_XML_VALUE})
+	public ResponseEntity<List<ReplyVO>> list(@PathVariable("bno") Long bno){
+		ResponseEntity<List<ReplyVO>> entity = null;
+		
+		try {
+			entity = new ResponseEntity<>(
+					service.listReply(bno), HttpStatus.OK);
+		} catch(Exception e) {
+			e.printStackTrace();
+			entity = new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
+		return entity;
+	}
+	
+	
+	
+	
+	
+	
 	
 	
 }
