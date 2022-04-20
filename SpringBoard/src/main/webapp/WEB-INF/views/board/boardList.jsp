@@ -25,7 +25,7 @@
 				<c:forEach var="board" items="${boardList }">
 					<tr>
 						<td>${board.bno }</td>
-						<td><a href="/boardDetail/${board.bno }?pageNum=${pageMaker.cri.pageNum}&searchType=${pageMaker.cri.searchType }&keyword=${pageMaker.cri.keyword}"> ${board.title }</a></td>
+						<td><a href="/board/boardDetail/${board.bno }?pageNum=${pageMaker.cri.pageNum}&searchType=${pageMaker.cri.searchType }&keyword=${pageMaker.cri.keyword}"> ${board.title }</a></td>
 						<td>${board.writer }</td>
 						<td>${board.regdate }</td>
 						<td>${board.updatedate }</td>
@@ -33,14 +33,14 @@
 				</c:forEach>
 			</tbody>
 		</table>
-		<a href="/boardInsert" class="btn btn-success">글쓰기</a><br/>
+		<a href="/board/boardInsert" class="btn btn-success">글쓰기</a><br/>
 		${pageMaker }<br/>
 			
 		  <!-- 이전 페이지 버튼 보일지 결정하는 부분 -->
 		  <ul class="pagination justify-content-center">
 		  	<c:if test="${pageMaker.prev }">
 		    	<li class="page-item">
-		    		<a class="page-link" href="/boardList?pageNum=${pageMaker.startPage -1}&searchType=${pageMaker.cri.searchType }&keyword=${pageMaker.cri.keyword}">
+		    		<a class="page-link" href="/board/boardList?pageNum=${pageMaker.startPage -1}&searchType=${pageMaker.cri.searchType }&keyword=${pageMaker.cri.keyword}">
 		    		&laquo;
 		    		</a>
 		    	</li>
@@ -49,7 +49,7 @@
 		    <!-- 밑에 깔아줄 버튼들 -->
 		    <c:forEach begin="${pageMaker.startPage }" end="${pageMaker.endPage }" var="idx">
 		    	<li class="page-item${pageMaker.cri.pageNum eq idx ? ' active' : '' }">
-		    		<a class="page-link" href="/boardList?pageNum=${idx}&searchType=${pageMaker.cri.searchType }&keyword=${pageMaker.cri.keyword}">
+		    		<a class="page-link" href="/board/boardList?pageNum=${idx}&searchType=${pageMaker.cri.searchType }&keyword=${pageMaker.cri.keyword}">
 		    			${idx}
 		    		</a>
 		    	</li>
@@ -57,7 +57,7 @@
 		    
 		    <c:if test="${pageMaker.next && pageMaker.endPage > 0 }">
 		    	<li class="page-item">
-		    		<a class="page-link" href="/boardList?pageNum=${pageMaker.endPage + 1}&searchType=${pageMaker.cri.searchType }&keyword=${pageMaker.cri.keyword}">
+		    		<a class="page-link" href="/board/boardList?pageNum=${pageMaker.endPage + 1}&searchType=${pageMaker.cri.searchType }&keyword=${pageMaker.cri.keyword}">
 		    			&raquo;
 		    		</a>
 		    	</li>
@@ -65,7 +65,7 @@
 		  </ul>
 		  <div class="row">
 		  	<!-- 검색창 부분 -->
-		  	<form action="/boardList" method="get">
+		  	<form action="/board/boardList" method="get">
 		  		<!-- select태그를 이용해 클릭해 검색조건을 선택할수있도록 처리합니다. -->
 		  		<select name="searchType">
 		  			<!-- 검색조건을 option태그를 이용해 만듭니다. -->
