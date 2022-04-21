@@ -5,7 +5,123 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-04-19T19:00:00Z</updated>
+  <updated>2022-04-20T23:21:00Z</updated>
+  <entry>
+    <title>Spring Session 2021.2.0-RC1, 2021.1.3 and 2021.0.6 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/04/20/spring-session-2021-2-0-rc1-2021-1-3-and-2021-0-6-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Eleftheria Stein-Kousathana</name>
+    </author>
+    <id>tag:spring.io,2022-04-20:4773</id>
+    <updated>2022-04-20T23:21:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team, I¡¯m pleased to announce the release of Spring Session &lt;code&gt;2021.2.0-RC1&lt;/code&gt;, &lt;code&gt;2021.1.3&lt;/code&gt; and &lt;code&gt;2021.0.6&lt;/code&gt;.&lt;br/&gt;The &lt;code&gt;2021.2.0&lt;/code&gt; release train is entering the RC phase. If you haven¡¯t done so yet, please give it a try!&lt;br/&gt;The &lt;code&gt;2021.1.3&lt;/code&gt; and &lt;code&gt;2021.0.6&lt;/code&gt; releases deliver bug fixes and dependency upgrades.&lt;br/&gt;For your convenience, Spring Boot will pick up these artifacts with its upcoming releases.&lt;/p&gt;
+&lt;p&gt;The following modules were updated as part of &lt;code&gt;2021.2.0-RC1&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Session Core &lt;code&gt;2.7.0-RC1&lt;/code&gt; - &lt;a href="https://github.com/spring-projects/spring-session/releases/tag/2.7.0-RC1"&gt;release notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Session Data Redis &lt;code&gt;2.7.0-RC1&lt;/code&gt; - &lt;a href="https://github.com/spring-projects/spring-session/releases/tag/2.7.0-RC1"&gt;release notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Session JDBC &lt;code&gt;2.7.0-RC1&lt;/code&gt; - &lt;a href="https://github.com/spring-projects/spring-session/releases/tag/2.7.0-RC1"&gt;release notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Session Hazelcast &lt;code&gt;2.7.0-RC1&lt;/code&gt; - &lt;a href="https://github.com/spring-projects/spring-session/releases/tag/2.7.0-RC1"&gt;release notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Session MongoDB &lt;code&gt;2.7.0-RC1&lt;/code&gt; - &lt;a href="https://github.com/spring-projects/spring-session/releases/tag/2.7.0-RC1"&gt;release notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Session for Apache Geode &lt;code&gt;2.7.0-RC1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following modules were updated as part of &lt;code&gt;2021.1.3&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Session Core &lt;code&gt;2.6.3&lt;/code&gt; - &lt;a href="https://github.com/spring-projects/spring-session/releases/tag/2.6.3"&gt;release notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Session Data Redis &lt;code&gt;2.6.3&lt;/code&gt; - &lt;a href="https://github.com/spring-projects/spring-session/releases/tag/2.6.3"&gt;release notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Session JDBC &lt;code&gt;2.6.3&lt;/code&gt; - &lt;a href="https://github.com/spring-projects/spring-session/releases/tag/2.6.3"&gt;release notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Session Hazelcast &lt;code&gt;2.6.3&lt;/code&gt; - &lt;a href="https://github.com/spring-projects/spring-session/releases/tag/2.6.3"&gt;release notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Session MongoDB &lt;code&gt;2.6.3&lt;/code&gt; - &lt;a href="https://github.com/spring-projects/spring-session/releases/tag/2.6.3"&gt;release notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Session for Apache Geode &lt;code&gt;2.6.1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following modules were updated as part of &lt;code&gt;2021.0.6&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Session Core &lt;code&gt;2.5.6&lt;/code&gt; - &lt;a href="https://github.com/spring-projects/spring-session/releases/tag/2.5.6"&gt;release notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Session Data Redis &lt;code&gt;2.5.6&lt;/code&gt; - &lt;a href="https://github.com/spring-projects/spring-session/releases/tag/2.5.6"&gt;release notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Session JDBC &lt;code&gt;2.5.6&lt;/code&gt; - &lt;a href="https://github.com/spring-projects/spring-session/releases/tag/2.5.6"&gt;release notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Session Hazelcast &lt;code&gt;2.5.6&lt;/code&gt; - &lt;a href="https://github.com/spring-projects/spring-session/releases/tag/2.5.6"&gt;release notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Session for Apache Geode &lt;code&gt;2.5.6&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring for GraphQL 1.0 RC1 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/04/20/spring-for-graphql-1-0-rc1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Brian Clozel</name>
+    </author>
+    <id>tag:spring.io,2022-04-20:4772</id>
+    <updated>2022-04-20T09:45:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of everyone involved, I&amp;rsquo;m pleased to announce the availability of the first and final release candidate of Spring for GraphQL 1.0. We&amp;rsquo;re finally going to release a 1.0 version on May 17, the reference version for Spring Boot 2.7.0. We&amp;rsquo;ve shipped a few noteworthy changes and one important new feature in this release.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; &lt;em&gt;The Spring for GraphqL Boot starter is up-to-date with the changes discussed in this post and Spring Boot 2.7.0-RC1 is scheduled to be released on Thursday this week.&lt;/em&gt;&lt;/p&gt;&lt;h3&gt;&lt;a href="#graphql-over-rsocket" class="anchor" name="graphql-over-rsocket"&gt;&lt;/a&gt;GraphQL over RSocket&lt;/h3&gt;
+&lt;p&gt;Spring for GraphQL started out with the HTTP and WebSocket transports - must haves in the GraphQL world. Our programming model allows adding others too, and our existing infrastructure pointed at another clear candidate: &lt;a href="https://rsocket.io/"&gt;the RSocket protocol&lt;/a&gt;. In RC1 we&amp;rsquo;ve added client and server support for GraphQL over RSocket.&lt;/p&gt;
+&lt;p&gt;RSocket supports streaming through reactive streams back-pressure, request throttling, session resumption, among others. Moreover, &lt;a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#rsocket"&gt;RSocket features&lt;/a&gt; provide all the semantics necessary to be a transport for all GraphQL requests, without an additional protocol on top such as is necessary for GraphQL over HTTP and over WebSocket.&lt;/p&gt;
+&lt;p&gt;RSocket itself runs over connection-oriented transports such as WebSocket, TCP, and others. In Spring Boot, you can &lt;a href="https://docs.spring.io/spring-boot/docs/2.7.0-SNAPSHOT/reference/html/messaging.html#messaging.rsocket"&gt;set up an RSocket server over WebSocket or TCP&lt;/a&gt;. After that you&amp;rsquo;ll just need to configure a &amp;ldquo;route&amp;rdquo; for the GraphQL messages through the &lt;code&gt;&amp;quot;spring.graphql.rsocket.mapping&amp;quot;&lt;/code&gt; property, e.g. &lt;code&gt;&amp;quot;spring.graphql.rsocket.mapping=graphql&amp;quot;&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;You can then use &lt;a href="https://github.com/making/rsc"&gt;rsc&lt;/a&gt; to test your GraphQL API:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;?  ~ rsc --request --route=graphql --dataMimeType=&amp;quot;application/graphql+json&amp;quot; --data=&amp;#39;{&amp;quot;query&amp;quot;:&amp;quot;{\n  greeting \n}&amp;quot;}&amp;#39; --debug tcp://example.spring.io:9191&#xD;
+DEBUG 39367 --- [actor-tcp-nio-2] io.rsocket.FrameLogger                   : sending -&amp;gt;&#xD;
+Frame =&amp;gt; Stream ID: 0 Type: SETUP Flags: 0b0 Length: 83&#xD;
+Data:&#xD;
+&#xD;
+DEBUG 39367 --- [actor-tcp-nio-2] io.rsocket.FrameLogger                   : sending -&amp;gt;&#xD;
+Frame =&amp;gt; Stream ID: 1 Type: REQUEST_RESPONSE Flags: 0b100000000 Length: 50&#xD;
+Metadata:&#xD;
+         +-------------------------------------------------+&#xD;
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |&#xD;
++--------+-------------------------------------------------+----------------+&#xD;
+|00000000| fe 00 00 08 07 67 72 61 70 68 71 6c             |.....graphql    |&#xD;
++--------+-------------------------------------------------+----------------+&#xD;
+Data:&#xD;
+         +-------------------------------------------------+&#xD;
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |&#xD;
++--------+-------------------------------------------------+----------------+&#xD;
+|00000000| 7b 22 71 75 65 72 79 22 3a 22 7b 5c 6e 20 20 67 |{&amp;quot;query&amp;quot;:&amp;quot;{\n  g|&#xD;
+|00000010| 72 65 65 74 69 6e 67 20 5c 6e 7d 22 7d          |reeting \n}&amp;quot;}   |&#xD;
++--------+-------------------------------------------------+----------------+&#xD;
+DEBUG 39367 --- [actor-tcp-nio-2] io.rsocket.FrameLogger                   : receiving -&amp;gt;&#xD;
+Frame =&amp;gt; Stream ID: 1 Type: NEXT_COMPLETE Flags: 0b1100000 Length: 45&#xD;
+Data:&#xD;
+         +-------------------------------------------------+&#xD;
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |&#xD;
++--------+-------------------------------------------------+----------------+&#xD;
+|00000000| 7b 22 64 61 74 61 22 3a 7b 22 67 72 65 65 74 69 |{&amp;quot;data&amp;quot;:{&amp;quot;greeti|&#xD;
+|00000010| 6e 67 22 3a 22 48 65 6c 6c 6f 2c 20 52 53 6f 63 |ng&amp;quot;:&amp;quot;Hello, RSoc|&#xD;
+|00000020| 6b 65 74 21 22 7d 7d                            |ket!&amp;quot;}}         |&#xD;
++--------+-------------------------------------------------+----------------+&#xD;
+{&amp;quot;data&amp;quot;:{&amp;quot;greeting&amp;quot;:&amp;quot;Hello, RSocket!&amp;quot;}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Spring for GraphQL also ships a dedicated GraphQL client for this case and&lt;br/&gt;&lt;a href="https://docs.spring.io/spring-boot/docs/2.7.0-SNAPSHOT/reference/html/web.html#web.graphql.transports.rsocket"&gt;Spring Boot auto-configures the builder for it&lt;/a&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;&lt;br/&gt;@Component&#xD;
+public class GraphQlExample {&#xD;
+&#xD;
+    private final RSocketGraphQlClient client;&#xD;
+&#xD;
+    public GraphQlExample(RSocketGraphQlClient.Builder&amp;lt;?&amp;gt; builder) {&#xD;
+        client = builder.tcp(&amp;quot;example.spring.io&amp;quot;, 8181).route(&amp;quot;graphql&amp;quot;).build();&#xD;
+    }&#xD;
+&#xD;
+    public Mono&amp;lt;String&amp;gt; getGreeting() {&#xD;
+        return client.document(&amp;quot;{ greeting }&amp;quot;)&#xD;
+            .retrieve(&amp;quot;greeting&amp;quot;)&#xD;
+            .toEntity(String.class);&#xD;
+    }&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;&lt;a href="#default-graphql-media-type" class="anchor" name="default-graphql-media-type"&gt;&lt;/a&gt;Default GraphQL Media Type&lt;/h3&gt;
+&lt;p&gt;So far, Spring for GraphQL was exclusively using &lt;code&gt;&amp;quot;application/json&amp;quot;&lt;/code&gt; as a media type for HTTP requests and responses. We decided that, for our release candidate, we needed to better align with the &lt;a href="https://github.com/graphql/graphql-over-http/blob/92b57a9179834318b6f15e1d23afc49368dd5e3c/spec/GraphQLOverHTTP.md#content-types"&gt;official GraphQL over HTTP specification&lt;/a&gt;. From now on, if the client doesn&amp;rsquo;t request any specific media type, we&amp;rsquo;ll use &lt;code&gt;&amp;quot;application/graphql+json&amp;quot;&lt;/code&gt; by default. We&amp;rsquo;ll keep supporting &lt;code&gt;&amp;quot;application/json&amp;quot;&lt;/code&gt; if clients request it. In any case, clients should recognize the &lt;code&gt;&amp;quot;+json&amp;quot;&lt;/code&gt; suffix and encode/decode accordingly.&lt;/p&gt;&lt;h3&gt;&lt;a href="#graphql-documents-locations" class="anchor" name="graphql-documents-locations"&gt;&lt;/a&gt;GraphQL documents locations&lt;/h3&gt;
+&lt;p&gt;In the previous releases, &lt;code&gt;&amp;quot;classpath:graphql&amp;quot;&lt;/code&gt; was the default location for schema files, client query documents and test client query documents. This could lead to situations where some would overshadow others and make your setup confusing.&lt;br/&gt;We&amp;rsquo;re refined the situation with the following changes:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The server schema files remain with the current default &lt;code&gt;&amp;quot;graphql&amp;quot;&lt;/code&gt; on the main classpath&lt;/li&gt;
+  &lt;li&gt;The tester defaults to &lt;code&gt;&amp;quot;graphql-test&amp;quot;&lt;/code&gt; (under src/test) for document files to test the server with&lt;/li&gt;
+  &lt;li&gt;The client defaults to &lt;code&gt;&amp;quot;graphql-documents&amp;quot;&lt;/code&gt; (under src/main), with a way to use a custom location for different remote APIs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Don&amp;rsquo;t forget to update your application with those new locations!&lt;/p&gt;&lt;h3&gt;&lt;a href="#graphqlsource-builder" class="anchor" name="graphqlsource-builder"&gt;&lt;/a&gt;GraphQlSource Builder&lt;/h3&gt;
+&lt;p&gt;GraphQL Java offers two ways to create a schema. One is to declare it in schema definition files which is known as the SDL way. The other way is to define it programmatically through Java code.&lt;/p&gt;
+&lt;p&gt;Spring for GraphQL and its &lt;code&gt;GraphQlSource&lt;/code&gt; builder focus on the former, i.e. the SDL way, by looking up and parsing &lt;code&gt;.graphqls&lt;/code&gt; files, preparing a &lt;code&gt;RuntimeWiring&lt;/code&gt;, and letting applications customize it. This is the more recent and &lt;a href="https://www.graphql-java.com/documentation/schema/"&gt;recommended option&lt;/a&gt; in GraphQL Java too. However, we recognize that the purpose of &lt;code&gt;GraphQlSource&lt;/code&gt; is to expose any &lt;code&gt;graphql.GraphQL&lt;/code&gt; instance regardless of how the &lt;code&gt;graphql.schema.GraphQLSchema&lt;/code&gt; was prepared.&lt;/p&gt;
+&lt;p&gt;In this release we&amp;rsquo;ve adjusted the &lt;code&gt;GraphQlSource&lt;/code&gt; builder, extracting common config options into a base builder and keeping SDL related options in an extension. This means an application can now skip the steps related to initializing the schema and instead supply an externally prepared &lt;code&gt;GraphQLSchema&lt;/code&gt;. This doesn&amp;rsquo;t bring first class support for programmatic schema creation, but it does bring more clarity, and leaves the option to do so in the future, depending on feedback and use cases.&lt;/p&gt;&lt;h3&gt;&lt;a href="#community" class="anchor" name="community"&gt;&lt;/a&gt;Community&lt;/h3&gt;
+&lt;p&gt;Last but not least, thanks for the continued feedback and discussions in the Spring for GraphQL issue tracker. We really appreciate it as it makes the project stronger and better!&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - April 19th, 2022</title>
     <link rel="alternate" href="https://spring.io/blog/2022/04/19/this-week-in-spring-april-19th-2022" />
@@ -738,73 +854,6 @@ public class MyApp {&#xD;
     <updated>2022-03-31T07:00:00Z</updated>
     <content type="html">&lt;p&gt;Hi, Spring fans! In this installment we dare to be boring with YugabyteDB, a distributed database that just works. It&amp;rsquo;s a database that feels like PostgreSQL but scales like Apache Cassandra.&lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/BjWJ8a2YJlg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Azure 4.0 is Now Generally Available</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/03/30/spring-cloud-azure-4-0-is-now-generally-available" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-03-29:4750</id>
-    <updated>2022-03-30T07:00:00Z</updated>
-    <content type="html">&lt;p&gt;&lt;strong&gt;NOTE: Hi, Spring fans! This is a guest post from Sean Li, our friend at Microsoft&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;I am pleased to announce that Spring Cloud Azure 4.0 is now generally available. With this major release we aim to bring better security, leaner dependencies, support for production readiness and more. Version 4 represents a significant milestone in our product roadmap that we couldn¡¯t have delivered without the collective wisdom of the Spring community and customer feedback. On behalf of the Spring on Azure product team, thank you for making this happen!&lt;/p&gt;&lt;h2&gt;&lt;a href="#unified-development-experience" class="anchor" name="unified-development-experience"&gt;&lt;/a&gt;Unified Development Experience&lt;/h2&gt;
-&lt;p&gt;At the Developer Division of Microsoft, we are big on developer experience. We constantly challenge ourselves on how we can make things more consistent and easier to understand, so our customers are not confronted with haphazard development choices. This is a long and self-evolving journey as consistency is relative and there will be things that are outside of our control. We now humbly take another step in this direction to improve to our developer experience by unifying project name, artifact ID and properties. &lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint xml"&gt;&lt;br/&gt;&amp;lt;dependencyManagement&amp;gt;&#xD;
-  &amp;lt;dependencies&amp;gt;&#xD;
-    &amp;lt;dependency&amp;gt;&#xD;
-      &amp;lt;groupId&amp;gt;com.azure.spring&amp;lt;/groupId&amp;gt;&#xD;
-      &amp;lt;artifactId&amp;gt;spring-cloud-azure-dependencies&amp;lt;/artifactId&amp;gt;&#xD;
-      &amp;lt;version&amp;gt;4.0.0&amp;lt;/version&amp;gt;&#xD;
-      &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;&#xD;
-      &amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt;&#xD;
-    &amp;lt;/dependency&amp;gt;&#xD;
-  &amp;lt;/dependencies&amp;gt;&#xD;
-&amp;lt;/dependencyManagement&amp;gt;&#xD;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;&lt;a href="#simplified-dependency-management" class="anchor" name="simplified-dependency-management"&gt;&lt;/a&gt;Simplified dependency management&lt;/h2&gt;
-&lt;p&gt;Dependency management is one of the core value pillars that has helped Spring establish preeminence over to other Java frameworks. In that spirit, we have also been exploring ways to make dependency management easier for Spring developers on Azure. In this release we have codified best practices and expertise from Spring experts and condensed all of our dependency BOMs into one, spring-cloud-azure-dependencies, which we believe will further bring down the learning curve and avoid ill-handling of dependencies.&lt;/p&gt;&lt;h2&gt;&lt;a href="#expanded-support-scope-of-azure-support" class="anchor" name="expanded-support-scope-of-azure-support"&gt;&lt;/a&gt;Expanded support scope of Azure Support&lt;/h2&gt;
-&lt;p&gt;The Azure Support module in Spring Initializr provides auto-configuration of many Azure services. &lt;/p&gt;
-&lt;img src="https://github.com/joshlong/blog-images/blob/master/spring-cloud-azure-4/initializr.png?raw=true"/&gt;
-&lt;p&gt;In this release we have expanded the scope of Azure Support to cover the additional 3 more services:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Event Hubs&lt;/li&gt;
-  &lt;li&gt;Azure Cache for Redis&lt;/li&gt;
-  &lt;li&gt;App Configuration&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Our journey does not end here and over time we will bring even more Azure services into the fold.&lt;/p&gt;&lt;h2&gt;&lt;a href="#more-flexible-spring-programming-model" class="anchor" name="more-flexible-spring-programming-model"&gt;&lt;/a&gt;More flexible Spring programming model&lt;/h2&gt;
-&lt;p&gt;One bit of feedback that we consistently hear is our Spring modules are unnecessarily stacked on top of too many layers of dependencies, which has prevented broader adoption. As an example, all of our early Spring modules rely on Spring Boot, and many of our customers are running Spring MVC apps in Tomcat, leveraging nothing but Spring Data, as an example, to communicate with data services. We have rearchitected our Spring module dependencies from the ground up to make them a better fit with different approaches. Take the programming model for Azure Event Hubs as an example. Purple boxes in the diagrams represent Spring Cloud Azure client libraries. You can use Spring binder (spring-cloud-azure-stream-binder-eventhubs), Spring integration (spring-integration-azure-eventhubs) and Spring Kafka (spring-messaging-azure) to interact with Azure Event Hubs.&lt;/p&gt;
-&lt;img src="https://github.com/joshlong/blog-images/blob/master/spring-cloud-azure-4/graph.png?raw=true"/&gt;&lt;h2&gt;&lt;a href="#more-control-and-secure" class="anchor" name="more-control-and-secure"&gt;&lt;/a&gt;More control and secure&lt;/h2&gt;
-&lt;p&gt;At the heart of every real-world application is identity and secret management. Support for managed identity has become a fundamental principle for Azure, providing a security baseline at the individual service level. We believe aligning on those guidelines will also benefit Spring developers at large, and have added Managed Identity support for App Configuration, Event Hub, Service Bus, Cosmos, Key Vault, Storage Blob, and Storage Queue. This enables building credential-free applications, which is a pattern that has picked up tremendous momentum both at Microsoft and in the community. In addition to Managed Identity, you can use any authentication methods supported in the underlying Azure SDK from our Spring libraries. For instance, you can use a SAS token and token credential to authenticate with Service Bus and Event Hubs. &lt;a href="https://docs.microsoft.com/en-us/dotnet/api/azure.identity.chainedtokencredential?view=azure-dotnet"&gt;Credential chain&lt;/a&gt; is now enabled by default, allowing applications to obtain credentials from application properties, environment variables, managed identity, IDEs, etc., all of which promote securing your apps in a zero-trust programing model.&lt;/p&gt;
-&lt;p&gt;Lastly providing granular level access control at the resource level (i.e.: Service Bus queue), is often of paramount importance when it comes to meeting the needs of our enterprise customers. We¡¯ve now unlocked these controls to our customers for better security governance and adherence to IT policies.&lt;/p&gt;&lt;h2&gt;&lt;a href="#more-options-exposed-in-a-spring-idiomatic-way" class="anchor" name="more-options-exposed-in-a-spring-idiomatic-way"&gt;&lt;/a&gt;More options exposed in a Spring idiomatic way&lt;/h2&gt;
-&lt;p&gt;Spring developers have long enjoyed the convenience of defining client options in application configuration files. We certainly do not want to take that privilege away and burden Spring developers with setting options via client objects. To that end, we¡¯ve significantly improved autoconfiguration coverage of Azure SDK clients for both synchronous and asynchronous scenarios. Case in point, here is a teaser preview of configuration options you can set with Spring Integration Azure Service Bus. &lt;/p&gt;
-&lt;img src="https://github.com/joshlong/blog-images/blob/master/spring-cloud-azure-4/table.png?raw=true"/&gt;&lt;h2&gt;&lt;a href="#more-production-ready" class="anchor" name="more-production-ready"&gt;&lt;/a&gt;More Production Ready&lt;/h2&gt;
-&lt;p&gt;Lastly all of the above would be in vain if we do not have enough feature coverage to support our customers in production. Many things come to my mind to make an application production ready, but observability often arrives at the top. We¡¯ve added health indicator for App Configuration, Event Hubs, Cosmos, Key Vault, Storage Blob, Storage Queue, Storage File, as well as Spring Cloud Sleuth support for all HTTP-based Azure SDKs. As an example, you now can probe if storage blob is up or down via Spring Boot actuator endpoint, as well as track dependencies and application latencies in a Zipkin dashboard.&lt;/p&gt;
-&lt;img src="https://github.com/joshlong/blog-images/blob/master/spring-cloud-azure-4/sleuth.png?raw=true"/&gt;&lt;h2&gt;&lt;a href="#getting-started" class="anchor" name="getting-started"&gt;&lt;/a&gt;Getting Started&lt;/h2&gt;
-&lt;p&gt;We hope you are as excited as we are about this release. To get started follow our latest&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://microsoft.github.io/spring-cloud-azure/current/reference/html/index.html"&gt;Reference docs&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/Azure-Samples/azure-spring-boot-samples"&gt;Code samples&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://microsoft.github.io/spring-cloud-azure/current/reference/html/index.html#migration-guide-for-4-0"&gt;Migration guides&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>CVE report published for Spring Cloud Function</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/03/29/cve-report-published-for-spring-cloud-function" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Oleg Zhurakousky</name>
-    </author>
-    <id>tag:spring.io,2022-03-29:4751</id>
-    <updated>2022-03-30T00:53:00Z</updated>
-    <content type="html">&lt;p&gt;We have released Spring Cloud Function &lt;a href="https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-function-context/3.1.7/"&gt;3.1.7&lt;/a&gt; &amp;amp; &lt;a href="https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-function-context/3.2.3/"&gt;3.2.3&lt;/a&gt; to address the following CVE report.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://tanzu.vmware.com/security/cve-2022-22963"&gt;CVE-2022-22963: Remote code execution in Spring Cloud Function by malicious Spring Expression&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Please review the information in the CVE report and upgrade immediately.&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
