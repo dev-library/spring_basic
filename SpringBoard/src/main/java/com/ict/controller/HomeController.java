@@ -42,4 +42,16 @@ public class HomeController {
 		
 	}
 	
+	@GetMapping("/onClickTest")
+	public void ajaxTest2() {
+		
+	}
+	
+	@GetMapping("/insertTest")
+	public void insertTest() {
+		
+	}
+	
+	
+	
 }
