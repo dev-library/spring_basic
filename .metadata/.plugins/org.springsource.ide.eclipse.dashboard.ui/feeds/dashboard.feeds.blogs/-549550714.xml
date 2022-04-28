@@ -5,7 +5,64 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-04-22T00:00:00Z</updated>
+  <updated>2022-04-27T06:15:00Z</updated>
+  <entry>
+    <title>This Week in Spring - April 26th, 2022</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/04/26/this-week-in-spring-april-26th-2022" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2022-04-26:4781</id>
+    <updated>2022-04-27T06:15:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I was &lt;em&gt;hoping&lt;/em&gt; to be in glorious Chicago, Illinois for the first in-person SpringOne Tour installment since the pandemic. But, alas, I couldn&amp;rsquo;t go because - out of an abundance of caution, and since I was exposed to COVID19 in Atlanta, GA - it was thought to be safer to keep some folks home and virtual. Sigh. This policy makes perfect sense &lt;em&gt;and&lt;/em&gt; it&amp;rsquo;s what I wanted. But it&amp;rsquo;s still a smidge disappointing to not be there. I miss y&amp;rsquo;all! It was fun at least doing a remote presentation. &lt;/p&gt;
+&lt;p&gt;Anyway, without further ado, let&amp;rsquo;s get into today&amp;rsquo;s roundup! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/04/21/a-bootiful-podcast-spring-cloud-legend-glenn-renfro-about-batch-processing-tasks-stream-processing-data-flow-and-t-shirts"&gt;A Bootiful Podcast: Spring Cloud legend Glenn Renfro about batch processing, tasks, stream processing, data flow, and t-shirts&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.baeldung.com/spring-boot-controllers-add-prefix"&gt;Add Prefix to All Spring Boot Controllers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/04/21/cve-report-published-for-spring-security-oauth"&gt;CVE report published for Spring Security OAuth&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.jobrunr.io/en/blog/2022-03-30-jobrunr-v5.0.0/"&gt;JobRunr 5.0 is out now and it supports Spring Native&lt;/a&gt;!&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://medium.com/graalvm/graalvm-22-1-developer-experience-improvements-apple-silicon-builds-and-more-b7ac9a0f6066"&gt;GraalVM 22.1: Developer experience improvements, Apple Silicon builds, and more&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I love Spring GraphQL, but its not the only option out there. &lt;a href="https://apurvsheth.medium.com/how-to-implement-graphql-using-netflixs-dgs-framework-spring-boot-schema-first-approach-32ba701fe8de"&gt;GraphQL Using Netflix¡¯s DGS Framework &amp;amp; Spring-Boot (Schema-First Approach)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://betterprogramming.pub/kafka-with-java-spring-and-docker-asynchronous-communication-between-microservices-e1d00e120831?gi=5c9a359c7dce"&gt;Kafka With Java, Spring, and Docker ? Asynchronous Communication Between Microservices&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/mayunkj/status/1516731904745033729"&gt;Mayunk Jain on Twitter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://apurvsheth.medium.com/serverless-with-spring-f65cbb8bea51"&gt;Serverless with Spring. 1. Introduction: ?In this article, we¡¦ | by Apurv Sheth | Mar, 2022 | Medium&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/04/21/spring-boot-2-5-13-available-now"&gt;Spring Boot 2.5.13 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/04/21/spring-boot-2-6-7-available-now"&gt;Spring Boot 2.6.7 available now&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/04/21/spring-boot-2-7-0-rc1-is-now-available"&gt;Spring Boot 2.7.0-RC1 is now available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=QuvS_VLbGko"&gt;Spring Boot Tutorial - Nice &amp;amp; Easy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/04/20/spring-session-2021-2-0-rc1-2021-1-3-and-2021-0-6-released"&gt;Spring Session 2021.2.0-RC1, 2021.1.3 and 2021.0.6 released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/04/26/spring-tools-4-14-1-released"&gt;Spring Tools 4.14.1 released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/04/20/spring-for-graphql-1-0-rc1-released"&gt;Spring for GraphQL 1.0 RC1 Released&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Tools 4.14.1 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/04/26/spring-tools-4-14-1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Martin Lippert</name>
+    </author>
+    <id>tag:spring.io,2022-04-26:4780</id>
+    <updated>2022-04-26T19:19:00Z</updated>
+    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;
+&lt;p&gt;I am happy to announce the 4.14.1 release of the Spring Tools 4 for Eclipse, Visual Studio Code, and Theia.&lt;/p&gt;&lt;h4&gt;&lt;a href="#fixes-and-improvements" class="anchor" name="fixes-and-improvements"&gt;&lt;/a&gt;fixes and improvements&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: use &lt;code&gt;startupSnapshot&lt;/code&gt; instead of &lt;code&gt;startup&lt;/code&gt; timer call to avoid wiping out the underlying data&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: When vscode opens a Java project for about 2 hours, the suggestion function will fail (&lt;a href="https://github.com/spring-projects/sts4/issues/750"&gt;#750&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(VSCode)&lt;/em&gt; enhancement: live hovers are now automatically show up when you launch a Spring Boot application in VSCode. Additional JVM args for the Spring Boot app to enable JMX are added to the launch automatically. More details can be found in the user guide section about &lt;a href="https://github.com/spring-projects/sts4/wiki/Live-Application-Information"&gt;Live Application Information&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(VSCode)&lt;/em&gt; enhancement: add extension APIs to get live data (&lt;a href="https://github.com/spring-projects/sts4/pull/751"&gt;#751&lt;/a&gt;) - contributed by @Eskibear&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To download the distribution for Eclipse and find links to the marketplace entries for Visual Studio Code and Theia, please go visit:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Tools 4: &lt;a href="https://spring.io/tools/"&gt;https://spring.io/tools/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Detailed changes can be found here: &lt;a href="https://github.com/spring-projects/sts4/wiki/Changelog/#2022-04-27-4141-release-incl-language-servers-version-1330"&gt;https://github.com/spring-projects/sts4/wiki/Changelog/#2022-04-27-4141-release-incl-language-servers-version-1330&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Spring Tools 4.15.0 is scheduled to be released in mid June 2022.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>A Bootiful Podcast: Spring Cloud legend Glenn Renfro about batch processing, tasks, stream processing, data flow, and t-shirts</title>
     <link rel="alternate" href="https://spring.io/blog/2022/04/21/a-bootiful-podcast-spring-cloud-legend-glenn-renfro-about-batch-processing-tasks-stream-processing-data-flow-and-t-shirts" />
@@ -75,12 +132,12 @@
   <entry>
     <title>Spring Boot 2.5.13 available now</title>
     <link rel="alternate" href="https://spring.io/blog/2022/04/21/spring-boot-2-5-13-available-now" />
-    <category term="engineering" label="Engineering" />
+    <category term="releases" label="Releases" />
     <author>
       <name>Moritz Halbritter</name>
     </author>
     <id>tag:spring.io,2022-04-21:4775</id>
-    <updated>2022-04-21T08:51:28Z</updated>
+    <updated>2022-04-21T08:51:00Z</updated>
     <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Boot &lt;code&gt;2.5.13&lt;/code&gt; has been released and is now available from Maven Central.&lt;/p&gt;
 &lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.5.13"&gt;31 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
 &lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
@@ -681,56 +738,6 @@ compile &amp;#39;org.springframework.cloud:spring-cloud-starter-netflix-eureka-c
 ...&#xD;
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - April 5th, 2022</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/04/05/this-week-in-spring-april-5th-2022" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-04-05:4761</id>
-    <updated>2022-04-05T19:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! I&amp;rsquo;m back home from the Hawaiin islands. It&amp;rsquo;s so good to be home. &lt;/p&gt;
-&lt;p&gt;First thing&amp;rsquo;s first: there&amp;rsquo;s a security vulnerability. We&amp;rsquo;ve already released guidance on how to mitigate as well as new releases of Spring Framework and Spring Boot that include the mitigation by deault. See the links below for more.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement"&gt;Spring Framework RCE, Early Announcement&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/04/01/spring-framework-rce-mitigation-alternative"&gt;Spring Framework RCE, Mitigation Alternative&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/29/cve-report-published-for-spring-cloud-function"&gt;CVE report published for Spring Cloud Function&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Now, back to your regularly scheduled installment of &lt;em&gt;This Week in Spring&lt;/em&gt;: &lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/31/a-bootiful-podcast-kubernetes-cofounder-and-vice-president-of-r-d-at-vmware-craig-mcluckie"&gt;A Bootiful Podcast: Kubernetes cofounder and vice president of R&amp;amp;D at VMware, Craig McLuckie&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/03/31/ready-for-dockershim-removal/"&gt;Blog: Is Your Cluster Ready for v1.24?&lt;/a&gt;&lt;br/&gt;native-java-framework-comparison)&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://medium.com/geekculture/clean-architecture-in-a-spring-application-312e119ee8ec"&gt;Clean Architecture in a Spring Application&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.infoq.com/news/2022/03/jhipster-native-image-support/"&gt;JHipster Native Blueprint Supports GraalVM Native Image&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.jobrunr.io/en/blog/2022-03-30-jobrunr-v5.0.0/"&gt;JobRunr &amp;amp; JobRunr Pro v5.0.0&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://blog.jdriven.com/2022/03/major-migrations-made-easy-with-openrewrite/"&gt;Major migrations made easy with OpenRewrite&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/31/spring-boot-2-5-12-available-now"&gt;Spring Boot 2.5.12 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/31/spring-boot-2-6-6-available-now"&gt;Spring Boot 2.6.6 available now&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/03/30/spring-cloud-azure-4-0-is-now-generally-available"&gt;Spring Cloud Azure 4.0 is Now Generally Available&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Happy April Fools! :D &lt;a href="https://twitter.com/spring_io/status/1509918390428876800?s=12&amp;t=SeB0gli2rNRzkSlKkjURFQ"&gt;Spring I/O on Twitter&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;In last week&amp;rsquo;s installment of Spring Tips, I looked at the &lt;a href="https://spring.io/blog/2022/03/31/spring-tips-brave-bold-and-boring-yugabytedb"&gt;Brave, Bold, and Boring YugabyteDB&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://youtube.com/watch?v=zvR-Oif_nxg&amp;feature=share"&gt; I haven&amp;rsquo;t watched this yet, but it&amp;rsquo;s a ten hour long tutorial on Spring Boot - there&amp;rsquo;s bound to be some good stuff in there! &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/JavaAtMicrosoft/status/1511138560321142793"&gt;https://twitter.com/JavaAtMicrosoft/status/1511138560321142793 @JavaAtMicrosoft #Java has played a critical role in democratizing cross-platform development. With #Microsoft&amp;rsquo;s recent JEP 388 contribution to #OpenJDK, Java apps can now run on a wider range&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.tutorialworks.com/difference-docker-containerd-runc-crio-oci/#:~:text=containerd%3A%20This%20is%20a%20daemon,actually%20creates%20and%20runs%20containers"&gt;The differences between Docker, containerd, CRI-O and runc - Tutorial Works&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Framework RCE, Mitigation Alternative</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/04/01/spring-framework-rce-mitigation-alternative" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Rossen Stoyanchev</name>
-    </author>
-    <id>tag:spring.io,2022-04-01:4760</id>
-    <updated>2022-04-01T11:49:00Z</updated>
-    <content type="html">&lt;p&gt;Yesterday we &lt;a href="https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement"&gt;announced&lt;/a&gt; a Spring Framework RCE vulnerability &lt;a href="https://tanzu.vmware.com/security/cve-2022-22965"&gt;CVE-2022-22965&lt;/a&gt;, listing Apache Tomcat as one of several preconditions. The Apache Tomcat team has since released versions &lt;strong&gt;10.0.20&lt;/strong&gt;, &lt;strong&gt;9.0.62&lt;/strong&gt;, and &lt;strong&gt;8.5.78&lt;/strong&gt; all of which close the attack vector on Tomcat&amp;rsquo;s side. While the vulnerability is not in Tomcat itself, in real world situations, it is important to be able to choose among multiple upgrade paths that in turn provides flexibility and layered protection. &lt;/p&gt;
-&lt;p&gt;Upgrading to Spring Framework &lt;strong&gt;5.3.18+&lt;/strong&gt; or &lt;strong&gt;5.2.20+&lt;/strong&gt; continues to be our main recommendation not only because it addresses the root cause and prevents other possible attack vectors, but also because it adds protection for other CVEs addressed since the current version in use. &lt;/p&gt;
-&lt;p&gt;For older, unsupported versions of the Spring Framework, the Tomcat releases provide an adequate solution for the reported attack vector. Nevertheless, we must stress that this should only be seen as a tactical solution, while the main goal should still be to upgrade to a currently &lt;a href="https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-Versions"&gt;supported Spring Framework version&lt;/a&gt; as soon as possible.&lt;/p&gt;
-&lt;p&gt;Last but not least, it&amp;rsquo;s worth mentioning that downgrading to Java 8 provides another viable workaround, which may be another tactical solution option.&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

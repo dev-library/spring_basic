@@ -3,6 +3,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+	#modDiv {
+		width:300px;
+		height:100px;
+		background-color : aqua;
+		position : absolute;
+		top:50%;
+		left:50%;
+		margin-top:-50px;
+		margin-left:-150px;
+		padding:10px;
+		z-index:1000; 
+	}
+</style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -24,12 +40,22 @@
 		<button id="replyAddBtn">댓글 추가</button>
 	</div>
 	
-	<!-- 위임 이해를 위한 코드(삭제예정)  -->
-	<button class="test">테스트1</button>
-	<button class="test">테스트2</button>
-	<button class="test">테스트3</button>
-	<button class="test">테스트4</button>
-	
+	<!-- modal은 일종의 팝업입니다.
+	단, 새 창을 띄우지는 않고 css를 이용해 특정 태그가 조건부로 보이거나 안 보이도록 처리해서 
+	마치 창이 새로 띄워지는것처럼 만듭니다
+	따라서 눈에 보이지는 않아도 modal을 구성하는 태그 자체는 화면에 미리 적혀있어야 합니다.-->
+	<div id="modDiv" style="display:none;">
+		<div class="modal-title">
+		</div>
+		<div>
+			<input type="text" id="reply">
+		</div>
+		<div>
+			<button type="button" id="replyModBtn">수정</button>
+			<button type="button" id="replyDelBtn">삭제</button>
+			<button type="button" id="closeBtn">닫기</button>
+		</div>
+	</div>
 	
 	
 	<!-- jquery cdn 가져오기 -->
@@ -70,6 +96,8 @@
 		}		
 		getAllList();// 댓글 전체 들고와서 #replies에 심어주는 로직 실행
 		
+		
+		// 댓글 작성 
 		$("#replyAddBtn").on("click", function(){
 			
 			// 폼이 없기때문에, input태그 내에 입력된 요소를 가져와야 합니다.
@@ -105,12 +133,6 @@
 			
 		});
 		
-		//.test를 클릭하면 "테스트 클릭 감지" 라는 alert을 띄우도록 이벤트를 걸어보세요.
-		$(".test").on("click", function(){
-			console.log(this.html());
-			// 클릭요소의 텍스트까지 같이 띄워주세요(ex : 테스트1 클릭 감지...)
-			alert(this + "클릭 감지.");
-		});
 		
 		// 이벤트 위임
 		$("#replies").on("click", ".replyLi button", function(){
@@ -126,7 +148,64 @@
 			
 			// rno뿐만 아니라 본문도 가져와야함
 			var reply = replytag.text();// 내부 text를 가져옴
-			alert(rno + " : " + reply);// 내부 text와 댓글번호를 alert으로 띄움
+			//alert(rno + " : " + reply);// 내부 text와 댓글번호를 alert으로 띄움
+			
+			$(".modal-title").html(rno);//modal-title 부분에 글번호 입력
+			$("#reply").val(reply);// reply 영역에 리플 내용을 기입(수정/삭제)
+			$("#modDiv").show("slow");// 버튼누르면 모달 열림
+		});
+		
+		// 모달 창 닫기 이벤트
+		$("#closeBtn").on("click", function(){// #closeBtn 클릭시
+			$("#modDiv").hide("slow");// #modDiv를 닫습니다
+		});
+		
+		// 삭제로직
+		$("#replyDelBtn").on("click", function(){
+			let rno = $(".modal-title").html();		
+			
+			$.ajax({
+				type : 'delete',
+				url : '/replies/' + rno,
+				header : {
+					"X-HTTP-Method-Override" : "DELETE"
+				},
+				dataType : 'text',
+				success : function(result) {
+					console.log("result : " + result);
+					if(result == 'SUCCESS'){
+						alert("삭제 되었습니다.");
+						$("#modDiv").hide("slow");
+						getAllList();// 삭제된 댓글 반영한 새 댓글목록갱신
+					}
+				}
+			});
+		});
+		
+		// 수정로직
+		$("#replyModBtn").on("click", function(){
+			let rno = $(".modal-title").html();		
+			let reply = $("#reply").val();// 댓글내용을 가져와서 넣어줘야 수정 가능
+			
+			$.ajax({
+				type : 'put',
+				url : '/replies/' + rno,
+				header : {
+					"Content-Type" : "application/json",
+					"X-HTTP-Method-Override" : "PUT"
+				},
+				contentType : "application/json",// json 자료를 추가로 입력받기 때문에
+				dataType : 'text',
+				data: JSON.stringify({reply:reply}),
+				success : function(result) {
+					console.log("result : " + result);
+					if(result == 'SUCCESS'){
+						alert("수정 되었습니다.");
+						$("#modDiv").hide("slow");
+						getAllList();// 삭제된 댓글 반영한 새 댓글목록갱신
+					}
+				}
+			});
 		});
 		
 		
