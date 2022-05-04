@@ -14,6 +14,11 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\ict03-00\Desktop\0503-spring.zip"/>
+			<item value="C:\Users\ict03-00\Desktop\0503-spring(시큐리티 프로젝트 web.xml완료).zip"/>
+			<item value="C:\Users\ict03-00\Desktop\0503-spring(시큐리티 프로젝트).zip"/>
+			<item value="C:\Users\ict03-00\Desktop\0502-spring.zip"/>
+			<item value="C:\Users\ict03-00\Desktop\0429-spring.zip"/>
 			<item value="C:\Users\ict03-00\Desktop\0428-spring.zip"/>
 			<item value="C:\Users\ict03-00\Desktop\0427-spring.zip"/>
 			<item value="C:\Users\ict03-00\Desktop\0426-spring.zip"/>
@@ -29,11 +34,6 @@
 			<item value="C:\Users\ict03-00\Desktop\0412-spring.zip"/>
 			<item value="C:\Users\ict03-00\Desktop\0411-spring.zip"/>
 			<item value="C:\Users\ict03-00\Desktop\0408-spring.zip"/>
-			<item value="C:\Users\ict03-00\Desktop\0407-spring.zip"/>
-			<item value="C:\Users\ict03-00\Desktop\0406-spring.zip"/>
-			<item value="C:\Users\ict03-00\Desktop\0405-spring.zip"/>
-			<item value="C:\Users\ict03-00\Desktop\0404-spring.zip"/>
-			<item value="C:\Users\ict03-00\Desktop\0325-spring(encoding).zip"/>
 		</list>
 	</section>
 	<section name="NewWizardAction">

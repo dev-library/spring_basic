@@ -13,5 +13,4 @@ public interface ReplyService {
 	public void modifyReply(ReplyVO vo);
 	
 	public void removeReply(Long rno);
-	
 }

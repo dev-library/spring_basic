@@ -83,10 +83,14 @@ public class ReplyController {
 		ResponseEntity<String> entity = null;
 		
 		try {
+
 			service.removeReply(rno);
+			
+
 			entity = new ResponseEntity<String>("SUCCESS", HttpStatus.OK);
 		} catch(Exception e) {
 			entity = new ResponseEntity<String>(e.getMessage(), HttpStatus.BAD_REQUEST);
+			log.info("예외발생 " + rno);
 		}
 		return entity;
 	}

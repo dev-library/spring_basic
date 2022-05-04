@@ -10,4 +10,8 @@ public class SampleServiceImpl implements SampleService {
 		return Integer.parseInt(str1) + Integer.parseInt(str2);
 	}
 
+	
+	
+	
+	
 }

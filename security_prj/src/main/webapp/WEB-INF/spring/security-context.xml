@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security 
+		http://www.springframework.org/schema/security/spring-security.xsd
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="customAccessDenied" class="com.ict.security.CustomAccessDeniedHandler"></bean>
+	
+	<security:http>
+	
+		<!-- /secu/all로 접속시 모든 유저에게 접속 허용 -->
+		<security:intercept-url pattern="/secu/all" access="permitAll" />
+	
+		<!-- /secu/member로 접속시 회원 권한을 가진 유저에게만 접속 허용 -->
+		<security:intercept-url pattern="/secu/member" access="hasRole('ROLE_MEMBER')" />
+
+		<!-- /secu/admin로 접속시 관리자 권한을 가진 유저에게만 접속 허용 -->
+		<security:intercept-url pattern="/secu/admin" access="hasRole('ROLE_ADMIN')" />
+			
+		<security:form-login/>
+		
+		<!-- <security:access-denied-handler error-page="/accessError" /> -->
+
+		<security:access-denied-handler ref="customAccessDenied"/>
+	
+	</security:http>
+	
+	<security:authentication-manager>
+	
+		<security:authentication-provider>
+			<security:user-service>
+				<security:user name="member" password="{noop}member" authorities="ROLE_MEMBER"/>
+				<security:user name="admin" password="{noop}admin" authorities="ROLE_MEMBER,ROLE_ADMIN"/>
+			</security:user-service>		
+		</security:authentication-provider>
+	
+	</security:authentication-manager>
+
+</beans>
