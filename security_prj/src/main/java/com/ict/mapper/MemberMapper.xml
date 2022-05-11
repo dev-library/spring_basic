@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http:/mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 위쪽에는 마이바티스에서 사용할 xml파일임을 명시
+아래쪽 mapper태그의 namespace에 어떤 인터페이스와 연동할지 패키지부터 다 적음 -->
+<mapper namespace="com.ict.mapper.MemberMapper">
+	<resultMap type="com.ict.domain.MemberVO" id="memberMap">
+		<id property="userId" column="userid" />
+		<result property="userId" column="userid" />
+		<result property="userPw" column="userpw" />
+		<result property="userName" column="username" />
+		<result property="regDate" column="regdate" />
+		<result property="updateDate" column="updatedate" />
+		<collection property="authList" resultMap="authMap"></collection>
+	</resultMap>
+	
+	<resultMap type="com.ict.domain.AuthVO" id="authMap">
+		<result property="userId" column="userid"/>
+		<result property="auth" column="auth"/>
+	</resultMap>
+	
+	<select id="read" resultMap="memberMap">
+		SELECT
+			m.userid, userpw, username, enabled, regdate, updatedate, a.auth
+				FROM
+			member_tbl m LEFT OUTER JOIN member_auth a on m.userid = a.userid
+				WHERE
+			m.userid = #{userId}
+	</select>
+	
+</mapper>

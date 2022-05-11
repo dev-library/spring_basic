@@ -9,5 +9,6 @@ org.eclipse.jdt.internal.ui.navigator.librariesnode=true
 org.eclipse.jdt.ui.formatterprofiles.version=21
 spelling_locale_initialized=true
 typefilter_migrated=true
+typefilter_migrated_2=true
 useAnnotationsPrefPage=true
 useQuickDiffPrefPage=true

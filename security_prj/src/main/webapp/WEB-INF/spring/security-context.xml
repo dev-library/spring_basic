@@ -9,6 +9,10 @@
 
 
 	<bean id="customAccessDenied" class="com.ict.security.CustomAccessDeniedHandler"></bean>
+	<bean id="customLoginSuccess" class="com.ict.security.CustomLoginSuccessHandler"></bean>
+	<bean id="customUserDetailsService" class="com.ict.security.CustomUserDetailsService"></bean>
+	<bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
+	
 	
 	<security:http>
 	
@@ -16,26 +20,41 @@
 		<security:intercept-url pattern="/secu/all" access="permitAll" />
 	
 		<!-- /secu/member로 접속시 회원 권한을 가진 유저에게만 접속 허용 -->
-		<security:intercept-url pattern="/secu/member" access="hasRole('ROLE_MEMBER')" />
+		<!-- <security:intercept-url pattern="/secu/member" access="hasRole('ROLE_MEMBER')" /> -->
 
 		<!-- /secu/admin로 접속시 관리자 권한을 가진 유저에게만 접속 허용 -->
-		<security:intercept-url pattern="/secu/admin" access="hasRole('ROLE_ADMIN')" />
+		<!-- <security:intercept-url pattern="/secu/admin" access="hasRole('ROLE_ADMIN')" /> -->
 			
-		<security:form-login/>
+		
+		<security:form-login login-page="/customLogin"
+			authentication-success-handler-ref="customLoginSuccess"/>
 		
 		<!-- <security:access-denied-handler error-page="/accessError" /> -->
 
 		<security:access-denied-handler ref="customAccessDenied"/>
+		
+		<security:logout logout-url="/customLogout" invalidate-session="true"
+						delete-cookies="remember-me,JSESSIONID" /> 
+	
+		<security:remember-me data-source-ref="dataSource" token-validity-seconds="604800"/>
 	
 	</security:http>
 	
 	<security:authentication-manager>
 	
-		<security:authentication-provider>
+		<security:authentication-provider 
+			user-service-ref="customUserDetailsService">
+		<!-- 
 			<security:user-service>
 				<security:user name="member" password="{noop}member" authorities="ROLE_MEMBER"/>
 				<security:user name="admin" password="{noop}admin" authorities="ROLE_MEMBER,ROLE_ADMIN"/>
-			</security:user-service>		
+			</security:user-service>
+		 -->
+		 <!-- <security:jdbc-user-service data-source-ref="dataSource" /> -->
+		 	
+		 
+		 <security:password-encoder ref="bcryptPasswordEncoder" />
+		 	
 		</security:authentication-provider>
 	
 	</security:authentication-manager>
