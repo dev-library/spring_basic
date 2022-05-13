@@ -1,5 +1,7 @@
 package com.ict.controller;
 
+import java.util.ArrayList;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +12,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.ict.domain.AuthVO;
 import com.ict.domain.MemberVO;
+import com.ict.service.SecurityService;
 
 import lombok.extern.log4j.Log4j;
 
@@ -19,8 +23,8 @@ import lombok.extern.log4j.Log4j;
 @Controller
 public class SecurityController {
 	
-	//@Autowired
-	//private SecurityService service;
+	@Autowired
+	private SecurityService service;
 	
 	@Autowired
 	private PasswordEncoder pwen;
@@ -54,10 +58,21 @@ public class SecurityController {
 	@PreAuthorize("permitAll")
 	@PostMapping("/join")
 	public void join(MemberVO vo, String[] role) {
-		log.info(vo);
-		for(String r : role) {
-			log.info(r);
+		
+		String beforeCrPw = vo.getUserPw();
+		vo.setUserPw(pwen.encode(beforeCrPw));
+		
+		// null 상태인 authList에 빈 ArrayList를 먼저 배정
+		vo.setAuthList(new ArrayList<AuthVO>());
+		
+		// authList는 List<authList> 이므로 권한 개수에 맞게 넣어줘야함.
+		for(int i = 0; i < role.length; i++) {
+			vo.getAuthList().add(new AuthVO());
+			vo.getAuthList().get(i).setAuth(role[i]);
+			vo.getAuthList().get(i).setUserId(vo.getUserId());
 		}
+		
+		service.insertMember(vo);
 	}
 	
 	

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security 
+	http://www.springframework.org/schema/security/spring-security.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="customAccessDenied" class="com.ict.security.CustomAccessDeniedHandler" />
+	<bean id="customLoginSuccess" class="com.ict.security.CustomLoginSuccessHandler" />
+	<bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+	<bean id="customUserDetailsService" class="com.ict.security.CustomUserDetailsService" />
+
+	<security:http>
+	
+		<!-- 9페이지 시점에는 적용 안하지만 추후 커스텀 로그인 로직 추가 -->
+		<security:form-login login-page="/customLogin" 
+			authentication-success-handler-ref="customLoginSuccess"/>
+
+		<security:access-denied-handler ref="customAccessDenied"/>
+
+		<security:logout logout-url="/customLogout" invalidate-session="true"/>
+	
+		<security:remember-me data-source-ref="dataSource" token-validity-seconds="604800" />
+	
+	</security:http>
+
+	<security:authentication-manager>
+		<!-- 암호화 모듈 넣기 위해 먼저 선언해야 하는 태그 -->	
+		<security:authentication-provider
+			user-service-ref="customUserDetailsService">
+			
+			<!-- authentication-provider는 user-service가 없으면 에러가 발생하는데 추후 추가 -->
+			<security:password-encoder ref="bcryptPasswordEncoder"/>
+		
+		</security:authentication-provider>
+	
+	</security:authentication-manager>
+
+</beans>
