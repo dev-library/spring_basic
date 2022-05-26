@@ -28,8 +28,3 @@
 			m.userid = #{userId}
 	</select>
 </mapper>
-
-
-
-
-

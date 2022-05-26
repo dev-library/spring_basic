@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.ict.domain.AttachFileDTO;
+import com.ict.domain.BoardAttachVO;
 
 import lombok.extern.log4j.Log4j;
 import net.coobird.thumbnailator.Thumbnailator;
@@ -65,11 +65,11 @@ public class UploadController {
 	@PostMapping(value="/uploadFormAction",
 				produces=MediaType.APPLICATION_JSON_UTF8_VALUE)
 	@ResponseBody
-	public ResponseEntity<List<AttachFileDTO>> upladFormPost(MultipartFile[] uploadFile) {
+	public ResponseEntity<List<BoardAttachVO>> upladFormPost(MultipartFile[] uploadFile) {
 		
 		// AttachFileDTO는 파일 한 개의 정보를 저장합니다.
 		// 현재 파일 업로드는 여러 파일을 동시에 업로드하므로 List<AttachFileDTO>를 받도록 처리합니다.
-		List<AttachFileDTO> list = new ArrayList<>();
+		List<BoardAttachVO> list = new ArrayList<>();
 		
 		// 어떤 폴더에 저장할것인지 위치지정
 		String uploadFolder = "C:\\upload_data\\temp";
@@ -90,8 +90,8 @@ public class UploadController {
 			log.info("Upload File Name : " + multipartFile.getOriginalFilename());
 			log.info("Upload File Size : " + multipartFile.getSize());
 			
-			// 파일정보를 저장할 DTO 생성
-			AttachFileDTO attachDTO = new AttachFileDTO();
+			// 파일정보를 저장할 VO 생성
+			BoardAttachVO attachVO = new BoardAttachVO();
 			
 			String uploadFileName = multipartFile.getOriginalFilename();
 			
@@ -99,7 +99,7 @@ public class UploadController {
 			log.info("last file name : " + uploadFileName);
 			
 			// 상단에 만든 DTO에 파일이름 저장
-			attachDTO.setFileName(uploadFileName);
+			attachVO.setFileName(uploadFileName);
 			
 			// uuid 발급 부분
 			UUID uuid = UUID.randomUUID();
@@ -115,12 +115,12 @@ public class UploadController {
 				multipartFile.transferTo(saveFile);
 				
 				// uuid와 저장할 폴더 경로를 setter로 입력받기
-				attachDTO.setUuid(uuid.toString());
-				attachDTO.setUploadPath(uploadFolderPath);
+				attachVO.setUuid(uuid.toString());
+				attachVO.setUploadPath(uploadFolderPath);
 				
 				// 이 아래부터 썸네일 생성로직
 				if(checkImageType(saveFile)) {
-					attachDTO.setImage(true);
+					attachVO.setFileType(true);
 					
 					FileOutputStream thumbnail =
 						new FileOutputStream(new File(uploadPath, "s_"+uploadFileName));
@@ -130,7 +130,7 @@ public class UploadController {
 				}
 
 				// ArrayList에 개별 DTO를 집어넣어줘야 출력됨 
-				list.add(attachDTO);
+				list.add(attachVO);
 			} catch (Exception e) {
 				log.error(e.getMessage());
 			}
@@ -149,11 +149,11 @@ public class UploadController {
 	@PostMapping(value="/uploadAjaxAction",
 				produces=MediaType.APPLICATION_JSON_UTF8_VALUE)
 	@ResponseBody// rest컨트롤러 메서드로 변경
-	public ResponseEntity<List<AttachFileDTO>> uploadAjaxPost(MultipartFile[] uploadFile) {
+	public ResponseEntity<List<BoardAttachVO>> uploadAjaxPost(MultipartFile[] uploadFile) {
 		
 		log.info("ajax post update!");
 
-		List<AttachFileDTO> list = new ArrayList<>();
+		List<BoardAttachVO> list = new ArrayList<>();
 		
 		String uploadFolder = "C:\\upload_data\\temp";
 		
@@ -173,7 +173,7 @@ public class UploadController {
 			log.info("Upload file size : " + multipartFile.getSize());
 			
 			// 개별 파일에 대한 DTO 생성
-			AttachFileDTO attachDTO = new AttachFileDTO();
+			BoardAttachVO attachVO = new BoardAttachVO();
 			
 			String uploadFileName = multipartFile.getOriginalFilename();
 			
@@ -181,7 +181,7 @@ public class UploadController {
 			log.info("last file name : " + uploadFileName);
 			
 			// uploadFileName에 의해 파일이름을 얻어왔으면 파일명을 attachDTO에 집어넣음
-			attachDTO.setFileName(uploadFileName);
+			attachVO.setFileName(uploadFileName);
 			
 			// uuid 발급 부분
 			UUID uuid = UUID.randomUUID();
@@ -195,12 +195,12 @@ public class UploadController {
 				File saveFile = new File(uploadPath, uploadFileName);
 				multipartFile.transferTo(saveFile);
 				
-				attachDTO.setUuid(uuid.toString());
-				attachDTO.setUploadPath(uploadFolderPath);
+				attachVO.setUuid(uuid.toString());
+				attachVO.setUploadPath(uploadFolderPath);
 				
 				// 이 아래부터 썸네일 생성로직
 				if(checkImageType(saveFile)) {
-					attachDTO.setImage(true);
+					attachVO.setFileType(true);
 					
 					FileOutputStream thumbnail =
 						new FileOutputStream(new File(uploadPath, "s_"+uploadFileName));
@@ -209,7 +209,7 @@ public class UploadController {
 					thumbnail.close();
 				}
 				
-				list.add(attachDTO);
+				list.add(attachVO);
 				
 			} catch(Exception e) {
 				log.error(e.getMessage());

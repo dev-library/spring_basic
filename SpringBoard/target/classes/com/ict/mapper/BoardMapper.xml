@@ -68,9 +68,23 @@
 	<!-- insert 구문이므로 insert태그를 써야 하고 리턴자료가 없으니 자연히 resultType도 작성안합니다. 
 	BoardVO를 입력받지만 #{} 내부에는 vo.변수명 이 아닌 그냥 변수명을 그대로 써주시면 됩니다.-->
 	<insert id="insert">
+	
+		<!-- bno는 board_num.nextval이 실행되기 전까지 몇 번인지 알 수 없으므로
+		미리 vo에 bno를 추가하기 위해서는 아래 INSERT구문 실행 이전에 먼저 글번호가 몇번일지
+		조회하는 쿼리문이 실행되어야 함. 
+		
+		실행 이전에 bno값을 먼저 조회해서 bno변수명으로 저장 
+		keyProperty에 변수명을, order에 BEFORE를 넣어서
+		insert쿼리문 실행 이전에 조회한 bno값을 bno라는 명칭에 저장
+		-->
+		<selectKey keyProperty="bno" order="BEFORE" resultType="long">
+			SELECT board_num.nextval from dual
+		</selectKey>
+	
+	
 		INSERT INTO board_tbl (bno, title, content, writer)
 			VALUES
-		(board_num.nextval, #{title}, #{content}, #{writer})
+		(#{bno}, #{title}, #{content}, #{writer})
 	</insert>
 
 	<select id="select" resultType="com.ict.domain.BoardVO">
