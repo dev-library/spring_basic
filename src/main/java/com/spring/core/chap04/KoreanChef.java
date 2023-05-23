@@ -1,5 +1,7 @@
 package com.spring.core.chap04;
 
+import org.springframework.stereotype.Component;
+
 public class KoreanChef implements Chef {
 
     @Override

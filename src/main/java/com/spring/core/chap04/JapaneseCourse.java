@@ -2,7 +2,7 @@ package com.spring.core.chap04;
 
 import org.springframework.stereotype.Component;
 
-//@Component("jco")
+@Component("jco")
 public class JapaneseCourse implements Course {
     @Override
     public void combineMenu() {
