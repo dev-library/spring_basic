@@ -11,14 +11,14 @@ public class HotelManager {
     public Chef chef(){
         //Chef chefBean = new KoreanChef();
         //return chefBean;
-        return new JapaneseChef();
+        return new ChineseChef();
     }
 
     // 코스 객체 생성
     public Course course(){
         //Course courseBean = new KoreanCourse();
         //return courseBean;
-        return new JapaneseCourse();
+        return new ChineseCourse();
     }
 
     // 레스토랑 객체 생성
